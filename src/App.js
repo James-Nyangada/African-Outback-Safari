@@ -6,13 +6,16 @@ import SantoriniPage from "./routes/SantoriniPage";
 import Destinations from "./routes/Destinations";
 import HolidayTypes from "./routes/HolidayTypes";
 import ContactUs from "./routes/ContactUs";
-import SignUp from "./routes/SignUp";
+import BookNow from "./routes/BookNow";
 import Footer from "./components/Footer";
 import LogIn from "./routes/LogIn";
 import AboutUs from "./routes/AboutUs";
 import AntelizHotel from "./routes/AntelizHotel";
 import AntelizPrivateVilla from "./routes/AntelizPrivateVilla";
-import DubaiPage from "./routes/DubaiPage";
+import MountKenyaPage from "./routes/MountKenyaPage";
+import MaasaiMaraPage from "./routes/MaasaiMaraPage";
+import AmboseliPage from "./routes/AmboseliPage";
+import LakeNakuruPage from "./routes/LakeNakuruPage";
 
 function App() {
   return (
@@ -25,11 +28,14 @@ function App() {
         <Route path="/holiday-types" element={<HolidayTypes />} />
         <Route path="/blog" element={<Blog/>} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/book-now" element={<BookNow />} />
         <Route path="/log-in" element={<LogIn />} />
 
         <Route path="/santorini" element={<SantoriniPage />} />
-        <Route path="/dubai" element={<DubaiPage />} />
+        <Route path="/mount-kenya" element={<MountKenyaPage />} />
+        <Route path="/maasai-mara" element={<MaasaiMaraPage />} />
+        <Route path="/amboseli" element={<AmboseliPage />} />
+        <Route path="/lake-nakuru" element={<LakeNakuruPage />} />
         <Route path="/anteliz-suites" element={<AntelizHotel />} />
         <Route
           path="/anteliz-suites/anteliz-private-villa"

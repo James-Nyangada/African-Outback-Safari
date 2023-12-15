@@ -60,22 +60,25 @@ const Destinations = () => {
         <h2 className="title">Kenya</h2>
         <div className="destinations">
           {kenyaDestinations.map((item) => (
-            <div className="item">
-              <img src={item.img} alt="" />
-              <div className="details">
-                <h2>
-                  {item.city} <span>{item.country}</span>
-                </h2>
-                <span>
-                  <h3>
-                    {item.visits}+ <span>Visits</span>
-                  </h3>
-                  <h4>
-                    {item.reviews} <AiTwotoneStar />
-                  </h4>
-                </span>
+            <Link to={`${item.link}`} className="link-styles">
+              <div className="item">
+                <img src={item.img} alt="" />
+                <div className="details">
+                  <h2>
+                    {item.city} <span>{item.country}</span>
+                  </h2>
+                  <span>
+                    <h3>
+                      {item.visits}+ <span>Visits</span>
+                    </h3>
+                    <h4>
+                      {item.reviews} <AiTwotoneStar />
+                    </h4>
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
+            
           ))}
         </div>
         {/* <p className="seeAll">See All...</p> */}

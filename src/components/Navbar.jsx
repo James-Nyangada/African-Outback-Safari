@@ -113,9 +113,9 @@ const Navbar = () => {
         </Link>
         <div className="buttons">
            <Link
-            to={"/sign-up"}
-            className={activeTab === "sign-up" ? "activeTab" : "nonActive"}
-            onClick={() => setActiveTab("sign-up")}
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive"}
+            onClick={() => setActiveTab("book-now")}
           >
             <button>Book Now!</button>
           </Link>

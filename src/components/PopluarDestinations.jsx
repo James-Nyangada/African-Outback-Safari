@@ -46,10 +46,10 @@ const PopluarDestinations = () => {
             </span>
           </motion.div>
         </Link>
-        <Link to={"/dubai"} className="link-styles">
+        <Link to={"/mount-kenya"} className="link-styles">
           <motion.div animate={animation} className="item">
             <img src={dubai} alt="" />
-            <h2>Coast</h2>
+            <h2>Mount Kenya</h2>
             <span>
               <h3>
                 <span>610+</span> VISITS
@@ -61,30 +61,38 @@ const PopluarDestinations = () => {
           </motion.div>
         </Link>
 
-        <motion.div animate={animation} className="item">
-          <img src={thailand} alt="" />
-          <h2>Mount Kenya</h2>
-          <span>
-            <h3>
-              <span>570+</span> VISITS
-            </h3>
-            <h4>
-              4.8 <AiTwotoneStar className="icon" />
-            </h4>
-          </span>
-        </motion.div>
-        <motion.div animate={animation} className="item">
-          <img src={hawaii} alt="" />
-          <h2>Masaai Mara</h2>
-          <span>
-            <h3>
-              <span>540+</span> VISITS
-            </h3>
-            <h4>
-              4.7 <AiTwotoneStar className="icon" />
-            </h4>
-          </span>
-        </motion.div>
+        <Link>
+          <motion.div animate={animation} className="item">
+            <img src={thailand} alt="" />
+            <h2>Coast</h2>
+            <span>
+              <h3>
+                <span>570+</span> VISITS
+              </h3>
+              <h4>
+                4.8 <AiTwotoneStar className="icon" />
+              </h4>
+            </span>
+          </motion.div>
+        </Link>
+
+        <Link to={"/maasai-mara"} className="link-styles">
+          <motion.div animate={animation} className="item">
+            <img src={hawaii} alt="" />
+            <h2>Masaai Mara</h2>
+            <span>
+              <h3>
+                <span>540+</span> VISITS
+              </h3>
+              <h4>
+                4.7 <AiTwotoneStar className="icon" />
+              </h4>
+            </span>
+          </motion.div>
+        </Link>
+
+       
+        
       </div>
     </Container>
   );

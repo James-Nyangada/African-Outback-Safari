@@ -13,6 +13,7 @@ const destinationsData = {
       img: "https://albaniamyway.com/wp-content/uploads/2020/08/ksamil-beach-saranda-albania.jpg",
       visits: 148,
       reviews: 4.8,
+      link: "/mount-kenya",
     },
     {
       city: "Mombasa,",
@@ -34,6 +35,7 @@ const destinationsData = {
       img: "https://lp-cms-production.imgix.net/2021-06/GettyRF_543346423.jpg",
       visits: 238,
       reviews: 4.6,
+      link: "/maasai-mara"
     },
     {
       city: "Amboseli,",
@@ -41,6 +43,7 @@ const destinationsData = {
       img: "https://www.weloveourlife.net/wp-content/uploads/2021/08/A7R04065-1-1440x810.jpg",
       visits: 188,
       reviews: 4.8,
+      link: "/amboseli"
     },
     {
       city: "Lake Nakuru,",
@@ -48,6 +51,7 @@ const destinationsData = {
       img: "https://tulipfestivalamsterdam.com/wp-content/uploads/2018/10/Amsterdam-flowers-bigstock-Amsterdam-City-Skyline-At-Cana-228660700-1024x683.jpg",
       visits: 111,
       reviews: 4.3,
+      link: "/lake-nakuru"
     },
     {
       city: "Naivasha,",
@@ -64,6 +68,7 @@ const destinationsData = {
       img: "https://gommts3.mmtcdn.com/htl-imgs/htl-imgs/202001291805159657-303c1a80_z.jpg",
       visits: 318,
       reviews: 4.9,
+      link: "/santorini"
     },
     {
       city: "Dodoma,",
@@ -71,7 +76,7 @@ const destinationsData = {
       img: "https://www.foyerglobalhealth.com/wp-content/uploads/2022/04/Als-Expat-in-Dubai-Alle-unsere-Tipps-fur-eine-erfolgreiche-Auswanderung-1568x1046.jpg",
       visits: 391,
       reviews: 4.9,
-      link: "/dubai",
+      
     },
     {
       city: "Mt Kilimanjaro,",

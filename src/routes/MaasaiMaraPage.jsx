@@ -8,8 +8,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Link } from "react-router-dom";
 
-const DubaiPage = () => {
-  const { dubaiHotels } = data;
+const MaasaiMaraPage = () => {
+  const { maasaiMaraTrips } = data;
   return (
     <Container>
       <div className="banner">
@@ -29,9 +29,11 @@ const DubaiPage = () => {
           }}
           className="details"
         >
-          <h2>Discover the Jewel of the Desert with Travelo</h2>
+          <h2>Discover the Jewel of Maasai Mara With African Outback Safaris</h2>
           <p>A Fusion of Skyscraping Dreams and Desert Mystique.</p>
-          <button>See the Offers</button>
+          <Link to={"/book-now"} >
+            <button>Book NOW</button>
+          </Link>
         </motion.div>
       </div>
       <Swiper
@@ -44,7 +46,7 @@ const DubaiPage = () => {
         modules={[Pagination]}
         className="hotelsSwiper"
       >
-        {dubaiHotels.map((item) => (
+        {maasaiMaraTrips.map((item) => (
           <SwiperSlide className="slide">
             <div className="imgs">
               <div className="column">
@@ -57,16 +59,18 @@ const DubaiPage = () => {
               </div>
             </div>
             <div className="details">
-              <h2>{item.hotelName}</h2>
+              <h2 className="text-[25px] font-bold">{item.hotelName}</h2>
               <h3>
                 Rating: <span>{item.rate}</span>
               </h3>
-              <p>{item.description}</p>
+              <p className="text-[18px]">{item.description}</p>
               <div className="buttons">
                 <Link to={`${item.link}`} className="link-styles">
                   <button>More Details</button>
                 </Link>
-                <button>Book NOW</button>
+                <Link to={"/book-now"} >
+                  <button>Book NOW</button>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
@@ -424,4 +428,4 @@ const Container = styled.div`
   }
 `;
 
-export default DubaiPage;
+export default MaasaiMaraPage;

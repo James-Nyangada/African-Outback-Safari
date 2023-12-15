@@ -201,12 +201,13 @@ const hotelsData = {
       img: h10I2,
     },
   ],
-  dubaiHotels: [
+  mountKenyaTrips: [
     {
-      hotelName: "Mandarin Oriental Jumeira",
-      rate: 9.7,
+      hotelName: "4-day Naro Mour",
+      rate: 9.9,
+      link: "/naro-moru",
       description:
-        "Located in the low-rise, high-end Jumeirah neighbourhood, the Mandarin Oriental has a beach-side location that benefits from two incredible views — one out over the Arabian Gulf, and the other back over Dubai’s dramatic skyline, with the Burj Khalifa at its centre.",
+        "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
       colImg1:
@@ -217,11 +218,11 @@ const hotelsData = {
         "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
     },
     {
-      hotelName: "SLS, Dubai Design District",
+      hotelName: "4 days Sirimon route",
       rate: 9.9,
       rooms: 22,
       description:
-        "Topped by twin infinity pools and the Privilege bar and nightclub, the SLS doesn’t shy away from its party-hard credentials, although soothing pinks and rose gold are the tones of choice in guestrooms, perhaps in anticipation of the morning after.",
+        "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg: "https://whatson.ae/wp-content/uploads/2021/06/SLS_049.jpg",
       colImg1:
         "https://www.sleepermagazine.com/wp-content/uploads/2021/01/SLS-Dubai.jpg",
@@ -230,10 +231,10 @@ const hotelsData = {
       colImg3: "https://images2.bovpg.net/r/media/1/3/5/8/6/358635.jpg",
     },
     {
-      hotelName: "Atlantis The Palm",
+      hotelName: "5 day Sirimon Chongoria Route",
       rate: 9.4,
       description:
-        "Crowning the top of the Palm Jumeirah, it’s difficult to grasp the scale of the 1,500-room Atlantis at first, sprawling as it does over an expanse of beach and palm-filled gardens. ",
+        "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/420453792.jpg?k=551f9eecb9af37e026f60117ec27c87188919e09c4c26a313eb1fda9050c4f1e&o=&hp=1",
       colImg1:
@@ -244,10 +245,10 @@ const hotelsData = {
         "https://blog.skyloov.com/wp-content/uploads/2022/10/Hotel-Atlantis-The-Palm-1140x692.jpeg",
     },
     {
-      hotelName: "Caesars Palace Dubai",
+      hotelName: "5 day Chogoria Route",
       rate: 9.7,
       description:
-        "It may share a name with the Las Vegas casino hotel but that’s pretty much where the similarities end. Located on Bluewaters Island, adjacent to the Ain Dubai ferris wheel, it has a proper holiday feel",
+        "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
         "https://www.caesars.com/content/dam/empire/dbw/hotel/rooms/1920x1080/palace-family-two-bedroom-2-1920x1080.jpg.transform/slider-img/image.jpg",
       colImg1:
@@ -258,11 +259,11 @@ const hotelsData = {
         "https://bynder.onthebeach.co.uk/m/361cd4c7c3c8f3/original/Caesars-Palace-Bluewaters-Dubai.jpg",
     },
     {
-      hotelName: "Four Seasons Hotel",
+      hotelName: "6 day Sirimon",
       rate: 9.7,
       rooms: 22,
       description:
-        "While a 106-room hotel might sound large in some places, in Dubai it’s practically boutique. It’s sleek and sexy throughout, from its glass-sided aquarium-like swimming pool to the Luna rooftop bar with views straight onto the Burj Khalifa.",
+        "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
         "https://m.fourseasons.com/alt/img-opt/~70.1530/publish/content/dam/fourseasons/images/web/DJB/DJB_164_3060x1722.jpg",
       colImg1:
@@ -272,10 +273,10 @@ const hotelsData = {
         "https://press.fourseasons.com/content/dam/fourseasons/images/web/DIF/DIF_028_aspect16x9.jpg/jcr:content/renditions/cq5dam.web.press.722.keepaspectratio.jpeg",
     },
     {
-      hotelName: "25hours One Central Dubai",
-      rate: 927,
+      hotelName: "6 day hiking chogoria and Naro Moru Route",
+      rate: 9.6,
       description:
-        "The 25hours brand philosophy of “come as you are” is alive and kicking in Dubai, where a lobby full of quirky art, antiques, and a café that’s equal parts coffee shop and co-working space welcome a crowd of residents and tourists alike.",
+        "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
         "https://www.thetimes.co.uk/travel/wp-content/uploads/sites/6/2022/02/USE_ADBCH-Pool-79.jpg?resize=1536,1024",
       colImg1:
@@ -285,7 +286,7 @@ const hotelsData = {
       colImg3:
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/464507054.jpg?k=ade20abdf71f4541e3caa6271f8f95527c39d4cc8c5d8d80448846a0983e4789&o=&hp=1",
     },
-    {
+   /*  {
       hotelName: "One & Only The Palm",
       rate: 9.7,
       rooms: 22,
@@ -299,7 +300,63 @@ const hotelsData = {
         "https://static-new.lhw.com/HotelImages/Final/LW6211/lw6211_123757984_790x490.jpg",
       colImg3:
         "https://travellermade.com/wp-content/uploads/2012/07/OOTP-7.png",
+    }, */
+  ],
+  maasaiMaraTrips: [
+    {
+      hotelName: "3 day Maasai Mara Trip",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "Maasai Mara, also sometimes spelled Masai Mara and locally known simply as The Mara, is a large national game reserve in Narok, Kenya, contiguous with the Serengeti National Park in Tanzania. It is named in honour of the Maasai people, the ancestral inhabitants of the area, who migrated to the area from the Nile Basin. Their description of the area when looked at from afar: Mara means spotted in the local Maasai language, due to the many short bushy trees which dot the landscape.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
     },
+    
+  ],
+
+  amboseliTrips: [
+    {
+      hotelName: "3 day Amboseli Trip",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This 3 day safari takes you through Southern Kenya towards the Amboseli National Park, which lies in the shadows of Mount Kilimanjaro, Africa’s highest mountain. Amboseli is known for its rich wildlife , particularly its prolific elephant population. :",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+  ],
+
+  lakeNakuruTrips: [
+    {
+      hotelName: "4 day Lake Nakuru Safari",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "Lake Nakuru is one of the Rift Valley lakes at an elevation of 1,754 m above sea level. It lies to the south of Nakuru, in the rift valley of Kenya and is protected by Lake Nakuru National Park. The lake's abundance of algae used to attract a vast quantity of flamingos that famously lined the shore. Other birds also flourish in the area, as do warthogs, baboons and other large mammals. Eastern black rhinos and southern white rhinos have also been introduced.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
   ],
 };
 
