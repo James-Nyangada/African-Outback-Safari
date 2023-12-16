@@ -358,6 +358,355 @@ const hotelsData = {
     },
     
   ],
+  samburuTrips: [
+    {
+      hotelName: "3 day Samburu safari",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+  ],
+  mountKilimanjaroTrips: [
+    {
+      hotelName: "Marangu Route",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "Lemosho Route",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "Machome Route",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "Umbose Route",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "Rongai Route",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "The Rongai route ascents Kilimanjaro from the northeastern side of the mountain, along the border between Tanzania and Kenya. This route retains a sense of unspoilt wilderness and offers a different perspective on Kilimanjaro by approaching it from the north. ",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+  ],
+
+  serengetiTrips: [
+    {
+      hotelName: "5 day Manyara Serengeti",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "6 day Manyara,Serengeti,Ngorongoro,Tarangire safari",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "7 day Manyara,Serengeti,Ngorongoro,Tarangire safari",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+  ],
+
+  ngorongoroTrips: [
+    {
+      hotelName: "4 day Lake Manyara,Ngorongoro,Tarangire Camping",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "3 day Ngorongoro,Lake Manyara Camping",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "4 day Lake Manyara,Ngorongoro, Tarangire Lodging",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "7 day Manyara,Serengeti,Ngorongoro,Tarangire safari",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "6 day Manyara,Serengeti,Ngorongoro,Tarangire safari",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+  ],
+
+  lakeManyaraTrips: [
+    {
+      hotelName: "4 day Lake Manyara,Ngorongoro,Tarangire Camping",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "5 day Lake Manyara Camping",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "6 day Lake Manyara Camping",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "4 day Lake Manyara,Ngorongoro, Tarangire Lodging",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "7 day Manyara,Serengeti,Ngorongoro,Tarangire safari",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "6 day Manyara,Serengeti,Ngorongoro,Tarangire safari",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+    {
+      hotelName: "5 day Manyara,Serengeti lodging",
+      rate: 9.9,
+      link: "/naro-moru",
+      description:
+        "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
+      mainImg:
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/48/6e/mandarin-sea-front-suite.jpg?w=700&h=-1&s=1",
+      colImg1:
+        "https://www.kayak.com/rimg/himg/f6/9c/9f/leonardo-207085234-MODUB_Two_Bedroom_Sea_View_Suite_Twin_O-611147.jpg?width=1366&height=768&crop=true",
+      colImg2:
+        "https://media.cntraveler.com/photos/5cacabcb4c47554ce9bb89a8/16:9/w_2560,c_limit/Mandarin-Oriental-Jumeira-Dubai_2019dubai-fine-dining-tasca-terrace.jpg",
+      colImg3:
+        "https://leonardo.sk/wp-content/uploads/2021/04/MANDARIN-DUBAI-JUM-5-1100x825.jpg",
+    },
+    
+  ],
 };
 
 export default hotelsData;

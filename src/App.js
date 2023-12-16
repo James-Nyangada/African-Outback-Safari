@@ -16,6 +16,11 @@ import MountKenyaPage from "./routes/MountKenyaPage";
 import MaasaiMaraPage from "./routes/MaasaiMaraPage";
 import AmboseliPage from "./routes/AmboseliPage";
 import LakeNakuruPage from "./routes/LakeNakuruPage";
+import SamburuPage from "./routes/SamburuPage"
+import MountKilimanjaroPage from "./routes/MountKilimanjaroPage"
+import SerengetiPage from "./routes/SerengetiPage"
+import NgorongoroPage from "./routes/NgorongoroPage"
+import LakeManyaraPage from "./routes/LakeManyaraPage"
 
 function App() {
   return (
@@ -36,6 +41,11 @@ function App() {
         <Route path="/maasai-mara" element={<MaasaiMaraPage />} />
         <Route path="/amboseli" element={<AmboseliPage />} />
         <Route path="/lake-nakuru" element={<LakeNakuruPage />} />
+        <Route path="/samburu" element={<SamburuPage />} />
+        <Route path="/mount-kilimanjaro" element={<MountKilimanjaroPage/>} />
+        <Route path="/serengeti" element={<SerengetiPage/>} />
+        <Route path="/ngorongoro" element={<NgorongoroPage/>} />
+        <Route path="/lake-manyara" element={<LakeManyaraPage/>} />
         <Route path="/anteliz-suites" element={<AntelizHotel />} />
         <Route
           path="/anteliz-suites/anteliz-private-villa"

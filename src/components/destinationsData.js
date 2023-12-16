@@ -1,11 +1,12 @@
 const destinationsData = {
   kenyaDestinations: [
     {
-      city: "Nairobi,",
-      country: "Kenya",
+      city: "",
+      country: "Samburu",
       img: "https://images.ctfassets.net/zmjc9gr9hbbf/wyeZtor2wM0xw9xT6l7Jv/b6b757fd621182ac74324efd99d98d51/CAT35510_Colourful_walls_and_buildings_in_park_Guell__Barcelona._Shutterstock.jpg?w=1980",
       visits: 212,
       reviews: 4.7,
+      link: "/samburu",
     },
     {
       city: "Mount Kenya,",
@@ -63,7 +64,7 @@ const destinationsData = {
   ],
   tanzaniaDestinations: [
     {
-      city: "Daresalam",
+      city: "Arusha",
       country: "Tanzania",
       img: "https://gommts3.mmtcdn.com/htl-imgs/htl-imgs/202001291805159657-303c1a80_z.jpg",
       visits: 318,
@@ -71,55 +72,46 @@ const destinationsData = {
       link: "/santorini"
     },
     {
-      city: "Dodoma,",
+      city: "Mt Kilimanjaro,",
       country: "Tanzania",
       img: "https://www.foyerglobalhealth.com/wp-content/uploads/2022/04/Als-Expat-in-Dubai-Alle-unsere-Tipps-fur-eine-erfolgreiche-Auswanderung-1568x1046.jpg",
       visits: 391,
       reviews: 4.9,
+      link: "/mount-kilimanjaro"
       
     },
     {
-      city: "Mt Kilimanjaro,",
+      city: "Serengeti,",
       country: "Tanzania",
       img: "https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg",
       visits: 304,
       reviews: 4.8,
+      link: "/serengeti"
     },
     {
-      city: "Serengeti,",
+      city: "Ngorongoro,",
       country: "",
       img: "https://media.gq-magazine.co.uk/photos/5d13ad779a22c269d69496c8/16:9/w_2560%2Cc_limit/tokyo-hp-gq-19oct18_istock_b.jpg",
       visits: 274,
       reviews: 4.5,
+      link: "/ngorongoro"
     },
     {
-      city: "Ngorongoro,",
+      city: "Tarangire,",
       country: "Tanzania",
       img: "https://www.letsphuket.com/wp-content/uploads/phuket1.jpg",
       visits: 210,
       reviews: 4.7,
     },
     {
-      city: "Tarangire,",
+      city: "Lake Manyara,",
       country: "Tanzania",
       img: "https://a.cdn-hotels.com/gdcs/production64/d444/5252610b-aea3-4ea6-a76e-1ede20547e94.jpg",
       visits: 82,
       reviews: 4.4,
+      link: "/lake-manyara"
     },
-    {
-      city: "Lake Manyara",
-      country: "Tanzania",
-      img: "https://cdn.tripways.com/2020/04/01121701/singapore-2393073_640.jpg",
-      visits: 172,
-      reviews: 4.5,
-    },
-    /* {
-      city: "AbuDhabi",
-      country: "UAE",
-      img: "https://assets.wam.ae/uploads/2021/06/2678121744303781116.jpg",
-      visits: 278,
-      reviews: 4.7,
-    }, */
+    
   ],
   zanzibarDestinations: [
     {

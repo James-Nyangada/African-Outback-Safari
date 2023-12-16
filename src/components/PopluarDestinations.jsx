@@ -32,10 +32,10 @@ const PopluarDestinations = () => {
     <Container>
       <h1>Popluar Destinations</h1>
       <div className="items" ref={ref}>
-        <Link to={"/santorini"} className="link-styles">
+        <Link to={"/mount-kilimanjaro"} className="link-styles">
           <motion.div animate={animation} className="item">
             <img src={santorini} alt="" />
-            <h2>Tanzania</h2>
+            <h2>Mt Kilimanjaro</h2>
             <span>
               <h3>
                 <span>550+</span> VISITS
