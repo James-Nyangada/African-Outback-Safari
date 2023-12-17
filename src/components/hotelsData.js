@@ -205,7 +205,7 @@ const hotelsData = {
     {
       hotelName: "4-day Naro Mour",
       rate: 9.9,
-      link: "/naro-moru",
+      link: "/naro-moru-info",
       description:
         "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
@@ -220,6 +220,7 @@ const hotelsData = {
     {
       hotelName: "4 days Sirimon route",
       rate: 9.9,
+      link: "/sirimon-four-day-info",
       rooms: 22,
       description:
         "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
@@ -233,6 +234,7 @@ const hotelsData = {
     {
       hotelName: "5 day Sirimon Chongoria Route",
       rate: 9.4,
+      link: "/sirimon-chogoria-info",
       description:
         "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
@@ -247,6 +249,7 @@ const hotelsData = {
     {
       hotelName: "5 day Chogoria Route",
       rate: 9.7,
+      link: "/chogoria-info",
       description:
         "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
@@ -261,6 +264,7 @@ const hotelsData = {
     {
       hotelName: "6 day Sirimon",
       rate: 9.7,
+      link: "/sirimon-six-day-info",
       rooms: 22,
       description:
         "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
@@ -275,6 +279,7 @@ const hotelsData = {
     {
       hotelName: "6 day hiking chogoria and Naro Moru Route",
       rate: 9.6,
+      link: "/sirimon-six-day-info",
       description:
         "The most popular route in Mount Kenya National Park although not the most scenic which approaches from the west. Naro Moru route is also the fastest route to the trekking peak at Point Lenana. Take this classic route up Mount Kenya through the notoriously treacherous vertical bog and into the wide Teleki Valley beneath the Tryndall, The Lewis Glacier.",
       mainImg:
@@ -306,7 +311,7 @@ const hotelsData = {
     {
       hotelName: "3 day Maasai Mara Trip",
       rate: 9.9,
-      link: "/naro-moru",
+      link: "/maasai-mara-info",
       description:
         "Maasai Mara, also sometimes spelled Masai Mara and locally known simply as The Mara, is a large national game reserve in Narok, Kenya, contiguous with the Serengeti National Park in Tanzania. It is named in honour of the Maasai people, the ancestral inhabitants of the area, who migrated to the area from the Nile Basin. Their description of the area when looked at from afar: Mara means spotted in the local Maasai language, due to the many short bushy trees which dot the landscape.",
       mainImg:
@@ -325,7 +330,7 @@ const hotelsData = {
     {
       hotelName: "3 day Amboseli Trip",
       rate: 9.9,
-      link: "/naro-moru",
+      link: "/amboseli-info",
       description:
         "This 3 day safari takes you through Southern Kenya towards the Amboseli National Park, which lies in the shadows of Mount Kilimanjaro, Africa’s highest mountain. Amboseli is known for its rich wildlife , particularly its prolific elephant population. :",
       mainImg:
@@ -344,7 +349,7 @@ const hotelsData = {
     {
       hotelName: "4 day Lake Nakuru Safari",
       rate: 9.9,
-      link: "/naro-moru",
+      link: "/lake-nakuru-info",
       description:
         "Lake Nakuru is one of the Rift Valley lakes at an elevation of 1,754 m above sea level. It lies to the south of Nakuru, in the rift valley of Kenya and is protected by Lake Nakuru National Park. The lake's abundance of algae used to attract a vast quantity of flamingos that famously lined the shore. Other birds also flourish in the area, as do warthogs, baboons and other large mammals. Eastern black rhinos and southern white rhinos have also been introduced.",
       mainImg:
@@ -362,7 +367,7 @@ const hotelsData = {
     {
       hotelName: "3 day Samburu safari",
       rate: 9.9,
-      link: "/naro-moru",
+      link: "/samburu-info",
       description:
         "This tour takes you to the Samburu National Reserve in Kenya, with a stop at the Equatorial Crossing en route. The reserve is home to rare Northern species such as the Grevy zebra, Somali ostrich, and reticulated giraffe. In addition, it has over 900 elephants, large predators, numerous bird species, and occasionally-sighted wild dogs. This tour is a must for wildlife photography enthusiasts and naturalists visiting Africa.",
       mainImg:

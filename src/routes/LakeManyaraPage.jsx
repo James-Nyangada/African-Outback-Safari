@@ -29,7 +29,7 @@ const LakeManyaraPage = () => {
           }}
           className="details"
         >
-          <h2>Discover the Jewel of Samburu With African Outback Safaris</h2>
+          <h2>Discover the Jewel of Lake Manyara With African Outback Safaris</h2>
           <p>A Fusion of Skyscraping Dreams and Desert Mystique.</p>
           <Link to={"/book-now"} >
             <button>Book NOW</button>

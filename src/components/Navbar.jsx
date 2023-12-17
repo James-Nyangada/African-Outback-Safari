@@ -38,6 +38,11 @@ const Navbar = () => {
     setRoute(pathName);
   }, [location]); */
 
+  useEffect(() => {
+    // Scroll to the top when the activeTab changes
+    window.scrollTo(0, 0);
+  }, [activeTab]);
+
   return (
     <Container
       style={{

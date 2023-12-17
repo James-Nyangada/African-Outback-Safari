@@ -27,11 +27,14 @@ const ContactUsComp = () => {
           <h3>FAX</h3>
           <p>1-123-456-7890</p>
         </div> */}
-        <div className="item">
-          <AiFillPrinter className="icon" />
-          <h3>EMAIL</h3>
-          <p>amirisites@gmail.com</p>
-        </div>
+        <a href="mail:to">
+          <div className="item " >
+            <AiFillPrinter className="icon" />
+            <h3>EMAIL</h3>
+            <p>africanoutback <br /> safari@gmail.com</p>
+          </div>
+        </a>
+        
       </div>
       <form>
         <h2>CONTACT US</h2>

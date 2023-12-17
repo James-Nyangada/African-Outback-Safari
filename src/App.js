@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
 import Blog from  "./routes/Blog"
@@ -22,7 +23,23 @@ import SerengetiPage from "./routes/SerengetiPage"
 import NgorongoroPage from "./routes/NgorongoroPage"
 import LakeManyaraPage from "./routes/LakeManyaraPage"
 
+import Samburu from "./routes/Trip destination details/Samburu";
+import Amboseli from "./routes/Trip destination details/Amboseli"
+import Chogoria from "./routes/Trip destination details/Chogoria"
+import HikingChogoria from "./routes/Trip destination details/HikingChogoria"
+import LakeNakuru from "./routes/Trip destination details/LakeNakuru"
+import MaasaiMara from "./routes/Trip destination details/MaasaiMara"
+import NaroMoru from "./routes/Trip destination details/NaroMoru"
+import SirimonChogoria from "./routes/Trip destination details/SimironChogoria"
+import SirimonFourDay from "./routes/Trip destination details/SirimonFourDay"
+import SirimonSixDay from "./routes/Trip destination details/SirimonSixDay"
+
 function App() {
+  // Scroll to the top when the route changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="App">
       <Navbar />
@@ -46,6 +63,22 @@ function App() {
         <Route path="/serengeti" element={<SerengetiPage/>} />
         <Route path="/ngorongoro" element={<NgorongoroPage/>} />
         <Route path="/lake-manyara" element={<LakeManyaraPage/>} />
+
+
+        {/* Trip destionation details */}
+        
+        <Route path="/samburu-info" element={<Samburu/>} />
+        <Route path="/amboseli-info" element={<Amboseli/>} />
+        <Route path="/chogoria-info" element={<Chogoria/>} />
+        <Route path="/hiking-chogoria-info" element={<HikingChogoria/>} />
+        <Route path="/lake-nakuru-info" element={<LakeNakuru/>} />
+        <Route path="/maasai-mara-info" element={<MaasaiMara/>} />
+        <Route path="/naro-moru-info" element={<NaroMoru/>} />
+        <Route path="/sirimon-chogoria-info" element={<SirimonChogoria/>} />
+        <Route path="/sirimon-four-day-info" element={<SirimonFourDay/>} />
+        <Route path="/sirimon-six-day-info" element={<SirimonSixDay/>} />
+        
+
         <Route path="/anteliz-suites" element={<AntelizHotel />} />
         <Route
           path="/anteliz-suites/anteliz-private-villa"

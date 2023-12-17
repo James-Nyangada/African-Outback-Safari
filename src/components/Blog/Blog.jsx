@@ -36,11 +36,37 @@ const BlogContent = styled.div`
     gap: 2rem;
     width: 100%;
     justify-content: center;
+  }
+  @media (max-width: 767px) {
+    .container {
+      padding-top: 8rem;
+      padding-bottom: 6rem;
+    }
 
-    @media (max-width: 1200px) {
+    .title {
+      text-align: center;
+    }
+
+    .blog-boxes {
       justify-content: center;
     }
   }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .container {
+      padding-top: 8rem;
+      padding-bottom: 6rem;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .blog-boxes {
+      justify-content: center;
+    }
+  }
+
 `;
 
 const Blog = () => {

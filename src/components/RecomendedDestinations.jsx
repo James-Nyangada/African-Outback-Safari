@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import santorini from "../assets/homePageImages/santoriniImg.jpg";
 import dubai from "../assets/homePageImages/dubaiImg.jpg";
@@ -12,6 +13,14 @@ import fiveStarIcon from "../assets/homePageImages/5starsIcon.png";
 import { Link } from "react-router-dom";
 
 const RecomendedDestinations = () => {
+
+  const [activeTab,  setActiveTab]= useState("book-now")
+
+  useEffect(() => {
+    // Scroll to the top when the BookNow component mounts
+    window.scrollTo(0, 0);
+  }, [activeTab]);
+
   return (
     <Container>
       <h2 className="title">Recomended Destinations</h2>
@@ -28,97 +37,142 @@ const RecomendedDestinations = () => {
               landscapes are the wondrous results of this eruption that can only
               be admired in Santorini.
             </p>
-            <Link to={"/santorini"} className="link-styles">
-              <button>LET'S VISIT</button>
-            </Link>
+            <Link
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive" }
+            onClick={() => setActiveTab("book-now")}
+            >
+            <button>Book Now!</button>
+            </Link>   
           </div>
         </div>
         <div className="card">
           <img src={dubai} alt="" />
           <div>
-            <h2>South Kenya</h2>
-            <h3>Massai Mara</h3>
+            <h2>MassaiMara</h2>
+            <h3>South Kenya</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eum quibusdam cumque incidunt sapiente repellendus, culpa non eligendi, corporis, excepturi distinctio voluptatum! Veniam accusamus sequi voluptate eius ut molestiae repudiandae.
             </p>
-            <Link to={"/dubai"} className="link-styles">
-              <button>LET'S VISIT</button>
-            </Link>
+            <Link
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive" }
+            onClick={() => setActiveTab("book-now")}
+            >
+            <button>Book Now!</button>
+            </Link>  
           </div>
         </div>
         <div className="card">
           <img src={maldives} alt="" />
           <div>
-            <h2>Nairobi</h2>
+            <h2>Mt Kilimanjaro</h2>
+            <h3>Tanzania</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure saepe iusto voluptatibus similique quasi, officia quo incidunt, eligendi sapiente corrupti blanditiis ratione labore quam harum? Eius autem fuga aspernatur?
             </p>
-            <button>LET'S VISIT</button>
+            <Link
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive" }
+            onClick={() => setActiveTab("book-now")}
+            >
+            <button>Book Now!</button>
+            </Link>  
           </div>
         </div>
         <div className="card">
           <img src={hawaii} alt="" />
           <div>
-            <h2>Kisumu</h2>
+            <h2>Samburu</h2>
             <img src={fiveStarIcon} alt="" />
             <p>
              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem minima ipsa quia. Ab in fugiat, deleniti porro impedit quisquam est provident corrupti repudiandae sed praesentium veniam, inventore molestiae maiores at!
             </p>
-            <button>LET'S VISIT</button>
+            <Link
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive" }
+            onClick={() => setActiveTab("book-now")}
+            >
+            <button>Book Now!</button>
+            </Link>  
           </div>
         </div>
         <div className="card">
           <img src={mykonos} alt="" />
           <div>
-            <h2>Central Province</h2>
-            <h3>Mount Kenya</h3>
+            <h2>Lake Nakuru</h2>
+            <h3>Rift Vallet</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, veniam unde provident fugiat eaque qui facere non. Quae velit laborum iusto animi nihil, voluptate asperiores! Maxime nostrum expedita sunt impedit.
             </p>
-            <button>LET'S VISIT</button>
+            <Link
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive" }
+            onClick={() => setActiveTab("book-now")}
+            >
+            <button>Book Now!</button>
+            </Link>  
           </div>
         </div>
         <div className="card">
           <img src={miami} alt="" />
           <div>
-            <h2>Nanyuki</h2>
+            <h2>Serengeti</h2>
             {/* <h3>Florida, USA</h3> */}
             <img src={fiveStarIcon} alt="" />
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam modi nam, asperiores doloribus veniam provident, suscipit est possimus quibusdam dolor ducimus quas adipisci dolore quos illum natus corporis nihil delectus?
             </p>
-            <button>LET'S VISIT</button>
+            <Link
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive" }
+            onClick={() => setActiveTab("book-now")}
+            >
+            <button>Book Now!</button>
+            </Link>  
           </div>
         </div>
         <div className="card">
           <img src={ksamil} alt="" />
           <div>
-            <h2>Naivasha</h2>
-            <h3>Lake Niavasha</h3>
+            <h2>Tanzania</h2>
+            <h3>Lake Manyara</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo tempora nobis veniam ratione quisquam dolorem rerum harum vitae voluptate sit perferendis, ducimus nihil iure, placeat fuga suscipit dignissimos asperiores!
             </p>
-            <button>LET'S VISIT</button>
+            <Link
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive" }
+            onClick={() => setActiveTab("book-now")}
+            >
+            <button>Book Now!</button>
+            </Link>  
           </div>
         </div>
         <div className="card">
           <img src={bali} alt="" />
           <div>
-            <h2>Rift Valley</h2>
+            <h2>Amboseli</h2>
             {/* <h3>Indonesia</h3> */}
             <img src={fiveStarIcon} alt="" />
             <p>
              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestiae recusandae non modi error id architecto nobis voluptas nisi! Enim explicabo quaerat sint sapiente mollitia eaque? Eligendi unde illum reprehenderit.
             </p>
-            <button>LET'S VISIT</button>
+            <Link
+            to={"/book-now"}
+            className={activeTab === "book-now" ? "activeTab" : "nonActive" }
+            onClick={() => setActiveTab("book-now")}
+            >
+            <button>Book Now!</button>
+            </Link>  
           </div>
         </div>
         <div className="card">
-          <Link to={"/destinations"} className="link-styles">
+          <Link to={"/destinations"} className={activeTab ==="book-now"} onClick={() => setActiveTab("book-now")} >
             <div>
               <button>SEE ALL</button>
             </div>

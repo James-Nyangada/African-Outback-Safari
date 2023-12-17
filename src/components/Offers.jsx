@@ -1,4 +1,5 @@
 import React from "react";
+import { Link,} from "react-router-dom";
 import styled from "styled-components";
 
 const Offers = () => {
@@ -7,7 +8,10 @@ const Offers = () => {
       <div className="card">
         <h2>Get 50% off by Early Booking</h2>
         <p>Book Now to get 50% off on more than 20 destinations</p>
-        <button>See all offers</button>
+        <Link to={"/book-now"}>
+          <button button>BOOK NOW</button>
+        </Link>
+        
       </div>
     </Container>
   );
