@@ -30,6 +30,10 @@ const Footer = () => {
       setLoading(false);
     }
   }
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
   return (
     <Container>
       <footer className="bg-[#2E2E3A]">
@@ -121,8 +125,39 @@ const Footer = () => {
             </div>
 
             {/* Subscription Div */}
+            <div className="flex flex-col gap-8 relative">
+      <p className="text-[22px] text-[#FFFFFF] font-bold footer-main">
+        Subscribe to our Newsletter
+      </p>
 
-       iii 
+      <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
+
+      <div className="flex flex-col gap-4">
+        <label htmlFor="email" className="text-[16px] text-[#FFFFFF] font-medium">
+          Email:
+        </label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          className="border border-[#4FC0D6] rounded p-2 text-[16px] text-[#FFFFFF]"
+          onChange={handleEmailChange}
+        />
+      </div>
+
+      <button
+        className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80"
+        onClick={handleClick}
+        disabled={loading}
+      >
+        {loading ? 'Loading...' : 'Subscribe'}
+      </button>
+
+      {successMessage && <p className="text-green-500">{successMessage}</p>}
+      {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+    </div>
+      
   
 
             {/* right div */}
