@@ -5,8 +5,15 @@ import logo from "../assets/traveloLogo.png";
  import {Link} from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
+import { useEffect } from "react";
 
 const Footer = () => {
+  const handleClick = () => {
+    ///fetch {email} from the email  input field  field and pass it to the backend
+
+
+
+  }
   return (
     <Container>
       <footer className="bg-[#2E2E3A]">
@@ -119,7 +126,9 @@ const Footer = () => {
                 />
               </div>
 
-              <button className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80">
+              <button className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80"
+              onClick={handleClick}
+              >
                 Subscribe
               </button>
             </div>
