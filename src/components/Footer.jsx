@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import logo from "../assets/traveloLogo.png";
  import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
  import {Link} from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
-import { useEffect } from "react";
+import {  useState} from "react";
+import axios from "axios";
 
 const Footer = () => {
-  const handleClick = () => {
-    ///fetch {email} from the email  input field  field and pass it to the backend
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
+  const handleClick = async () => {
+    setLoading(true);
+    setSuccessMessage("");
+    setErrorMessage("");
 
-
+    try {
+      const response = await axios.post('http://localhost:3001/subscribe', { email_address: email });
+      console.log(response.data);
+      setSuccessMessage('Subscription successful');
+    } catch (error) {
+      console.error(error);
+      setErrorMessage('Subscription failed');
+    } finally {
+      setLoading(false);
+    }
   }
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
   return (
     <Container>
       <footer className="bg-[#2E2E3A]">
@@ -105,33 +125,40 @@ const Footer = () => {
             </div>
 
             {/* Subscription Div */}
-
             <div className="flex flex-col gap-8 relative">
-              <p className="text-[22px] text-[#FFFFFF] font-bold footer-main">
-                Subscribe to our Newsletter
-              </p>
+      <p className="text-[22px] text-[#FFFFFF] font-bold footer-main">
+        Subscribe to our Newsletter
+      </p>
 
-              <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
+      <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
 
-              <div className="flex flex-col gap-4">
-                <label htmlFor="email" className="text-[16px] text-[#FFFFFF] font-medium">
-                  Email:
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  className="border border-[#4FC0D6] rounded p-2 text-[16px] text-[#FFFFFF]"
-                />
-              </div>
+      <div className="flex flex-col gap-4">
+        <label htmlFor="email" className="text-[16px] text-[#FFFFFF] font-medium">
+          Email:
+        </label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          className="border border-[#4FC0D6] rounded p-2 text-[16px] text-[#FFFFFF]"
+          onChange={handleEmailChange}
+        />
+      </div>
 
-              <button className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80"
-              onClick={handleClick}
-              >
-                Subscribe
-              </button>
-            </div>
+      <button
+        className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80"
+        onClick={handleClick}
+        disabled={loading}
+      >
+        {loading ? 'Loading...' : 'Subscribe'}
+      </button>
+
+      {successMessage && <p className="text-green-500">{successMessage}</p>}
+      {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+    </div>
+      
+  
 
             {/* right div */}
             <div className="flex flex-col gap-8 relative">
