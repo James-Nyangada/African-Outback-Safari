@@ -1,16 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('superagent');
+const dotenv = require('dotenv');
+dotenv.config();
+
+const cors = require('cors');
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200
+}
 
 const app = express();
 const port = 3001;
 
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const mailchimpInstance = 'us21';
 const listUniqueId = '8444b6a9e9';
-const mailchimpApiKey = 'ebab15097cd01a4f1922270c2a2ab76b-us21';
+const mailchimpApiKey = process.env.MAILCHIMP_API_KEY;
 app.post('/subscribe', async (req, res) => {
   const { email_address } = req.body;
   console.log(req.body);
