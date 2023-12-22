@@ -141,7 +141,7 @@ const Footer = () => {
           id="email"
           name="email"
           placeholder="Enter your email"
-          className="border border-[#4FC0D6] rounded p-2 text-[16px] text-[#FFFFFF]"
+          className="border border-[#4FC0D6] rounded p-2 text-[16px] text-[#000000] font-bold email-text"
           onChange={handleEmailChange}
         />
       </div>
@@ -188,6 +188,13 @@ const Container = styled.div`
   .container {
     max-width: 124rem;
     margin: 0 auto;
+  }
+  &.email-text::placeholder {
+    color: black;
+  }
+
+  &.email-text {
+    color: black;
   }
   @media (max-width: 860px) {
     flex-direction: column;
