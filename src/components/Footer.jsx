@@ -120,8 +120,6 @@ const Footer = () => {
                   Contact Us
                 </p>
               </Link>
-              
-           
             </div>
 
             {/* Subscription Div */}
@@ -133,18 +131,19 @@ const Footer = () => {
       <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
 
       <div className="flex flex-col gap-4">
-        <label htmlFor="email" className="text-[16px] text-[#FFFFFF] font-medium">
-          Email:
-        </label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          className="border border-[#4FC0D6] rounded p-2 text-[16px] text-[#FFFFFF]"
-          onChange={handleEmailChange}
-        />
-      </div>
+  <label htmlFor="email" className="text-[16px] text-[#FFFFFF] font-medium">
+    Email:
+  </label>
+  <input
+    type="text"
+    id="email"
+    name="email"
+    placeholder="Enter your email"
+    className="border border-[#4FC0D6] rounded p-2 text-[16px] text-black" 
+    onChange={handleEmailChange}
+  />
+</div>
+
 
       <button
         className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80"
@@ -209,5 +208,10 @@ const Container = styled.div`
     }
   }
 `;
+
+
+
+
+
 
 export default Footer;

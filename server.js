@@ -11,7 +11,8 @@ const corsOptions = {
 }
 
 const app = express();
-const port = 3001;
+const port = 3001
+
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
