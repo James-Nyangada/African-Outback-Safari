@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/traveloLogo.png";
- import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
- import {Link} from "react-router-dom";
+import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
-import {  useState} from "react";
 import axios from "axios";
 
 const Footer = () => {
@@ -19,21 +18,57 @@ const Footer = () => {
     setSuccessMessage("");
     setErrorMessage("");
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      setErrorMessage("Invalid email format");
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 2000);
+      setLoading(false);
+      return;
+    }
+
     try {
-      const response = await axios.post('http://localhost:3001/subscribe', { email_address: email });
+      const response = await axios.post("http://localhost:3001/subscribe", {
+        email_address: email,
+      });
       console.log(response.data);
-      setSuccessMessage('Subscription successful');
+      setSuccessMessage("Subscription successful");
+
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 2000);
     } catch (error) {
       console.error(error);
-      setErrorMessage('Subscription failed');
+
+      // Check if the error is due to the member already existing
+      if (
+        error.response &&
+        error.response.status === 400 &&
+        error.response.data.title === "Member Exists"
+      ) {
+        setErrorMessage(
+          "Member already exists, please try another email"
+        );
+      } else {
+        setErrorMessage("Subscription failed");
+      }
+
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 2000);
     } finally {
       setLoading(false);
     }
-  }
+  };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+
+
+
   return (
     <Container>
       <footer className="bg-[#2E2E3A]">
@@ -120,8 +155,6 @@ const Footer = () => {
                   Contact Us
                 </p>
               </Link>
-              
-           
             </div>
 
             {/* Subscription Div */}
@@ -133,18 +166,19 @@ const Footer = () => {
       <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
 
       <div className="flex flex-col gap-4">
-        <label htmlFor="email" className="text-[16px] text-[#FFFFFF] font-medium">
-          Email:
-        </label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          className="border border-[#4FC0D6] rounded p-2 text-[16px] text-[#000000] font-bold email-text"
-          onChange={handleEmailChange}
-        />
-      </div>
+
+  <label htmlFor="email" className="text-[16px] text-[#FFFFFF] font-medium">
+    Email:
+  </label>
+  <input
+    type="text"
+    id="email"
+    name="email"
+    placeholder="Enter your email"
+    className="border border-[#4FC0D6] rounded p-2 text-[16px] text-black" 
+    onChange={handleEmailChange}
+  />
+</div>
 
       <button
         className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80"
@@ -216,5 +250,10 @@ const Container = styled.div`
     }
   }
 `;
+
+
+
+
+
 
 export default Footer;
