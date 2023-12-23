@@ -166,6 +166,7 @@ const Footer = () => {
       <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
 
       <div className="flex flex-col gap-4">
+
   <label htmlFor="email" className="text-[16px] text-[#FFFFFF] font-medium">
     Email:
   </label>
@@ -178,7 +179,6 @@ const Footer = () => {
     onChange={handleEmailChange}
   />
 </div>
-
 
       <button
         className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80"
@@ -222,6 +222,13 @@ const Container = styled.div`
   .container {
     max-width: 124rem;
     margin: 0 auto;
+  }
+  &.email-text::placeholder {
+    color: black;
+  }
+
+  &.email-text {
+    color: black;
   }
   @media (max-width: 860px) {
     flex-direction: column;
