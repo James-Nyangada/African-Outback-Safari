@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/traveloLogo.png";
- import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
- import {Link} from "react-router-dom";
+import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
-import {  useState} from "react";
 import axios from "axios";
 
 const Footer = () => {
@@ -19,21 +18,57 @@ const Footer = () => {
     setSuccessMessage("");
     setErrorMessage("");
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      setErrorMessage("Invalid email format");
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 2000);
+      setLoading(false);
+      return;
+    }
+
     try {
-      const response = await axios.post('http://localhost:3001/subscribe', { email_address: email });
+      const response = await axios.post("http://localhost:3001/subscribe", {
+        email_address: email,
+      });
       console.log(response.data);
-      setSuccessMessage('Subscription successful');
+      setSuccessMessage("Subscription successful");
+
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 2000);
     } catch (error) {
       console.error(error);
-      setErrorMessage('Subscription failed');
+
+      // Check if the error is due to the member already existing
+      if (
+        error.response &&
+        error.response.status === 400 &&
+        error.response.data.title === "Member Exists"
+      ) {
+        setErrorMessage(
+          "Member already exists, please try another email"
+        );
+      } else {
+        setErrorMessage("Subscription failed");
+      }
+
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 2000);
     } finally {
       setLoading(false);
     }
-  }
+  };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
+
+
+
   return (
     <Container>
       <footer className="bg-[#2E2E3A]">

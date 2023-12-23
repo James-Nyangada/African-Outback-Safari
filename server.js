@@ -28,14 +28,14 @@ app.post('/subscribe', async (req, res) => {
   try {
     // Check if member already exists
     const memberResponse = await request
-      .get(`https://${mailchimpInstance}.api.mailchimp.com/3.0/lists/${listUniqueId}/members/${email_address}`)
-      .set('Content-Type', 'application/json;charset=utf-8')
-      .set('Authorization', `Basic ${Buffer.from(`any:${mailchimpApiKey}`).toString('base64')}`);
+    .get(`https://${mailchimpInstance}.api.mailchimp.com/3.0/lists/${listUniqueId}/members/${email_address}`)
+    .set('Content-Type', 'application/json;charset=utf-8')
+    .set('Authorization', `Basic ${Buffer.from(`any:${mailchimpApiKey}`).toString('base64')}`);
 
-    if (memberResponse.body.status === 'subscribed') {
-      res.status(400).json({ success: false, message: 'Member already exists please try another email' });
-      return;
-    }
+  if (memberResponse.status === 200 && memberResponse.body.status === 'subscribed') {
+    res.status(400).json({ success: false, message: 'Member already exists, please try another email' });
+    return;
+  }
   } catch (error) {
     console.error(error.response.body);
   }
