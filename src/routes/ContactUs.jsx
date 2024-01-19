@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { HiLocationMarker } from "react-icons/hi";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
+import { BsWhatsapp } from "react-icons/bs";
 import { AiFillPrinter } from "react-icons/ai";
 import { motion } from "framer-motion";
 
@@ -25,9 +25,10 @@ const ContactUs = () => {
           <h3>OUR MAIN OFFICE</h3>
           <p>
             P.O Box 50997 <br />
-            Dubai
+            Nairobi
           </p>
         </motion.div>
+        
         <motion.div
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -500 }}
@@ -43,36 +44,44 @@ const ContactUs = () => {
           <h3>PHONE NUMBER</h3>
           <p>+1 123 123 1234</p>
         </motion.div>
-        <motion.div
-          animate={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -500 }}
-          transition={{
-            duration: 0.7,
-            delay: 0.3,
-            bounce: 0.3,
-            type: "spring",
-          }}
-          className="item"
-        >
-          <MdEmail className="icon" />
-          <h3>FAX</h3>
-          <p>1-123-456-7890</p>
-        </motion.div>
-        <motion.div
-          animate={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -500 }}
-          transition={{
-            duration: 0.7,
-            delay: 0.3,
-            bounce: 0.3,
-            type: "spring",
-          }}
-          className="item"
-        >
-          <AiFillPrinter className="icon" />
-          <h3>EMAIL</h3>
-          <p>amirisites@gmail.com</p>
-        </motion.div>
+
+        <a href="https:////wa.me/254791433046" target="_blank" rel="noreferrer">
+          <motion.div
+            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -500 }}
+            transition={{
+              duration: 0.7,
+              delay: 0.3,
+              bounce: 0.3,
+              type: "spring",
+            }}
+            className="item"
+          >
+            <BsWhatsapp className="icon" />
+            <h3>WhatsApp</h3>
+            <p>1-123-456-7890</p>
+          </motion.div>
+        </a>
+
+        <a href="mailto:jamesedwin03@gmail.com" target='_blank' rel="noreferrer">
+          <motion.div
+            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -500 }}
+            transition={{
+              duration: 0.7,
+              delay: 0.3,
+              bounce: 0.3,
+              type: "spring",
+            }}
+            className="item"
+          >
+            <AiFillPrinter className="icon" />
+            <h3>EMAIL</h3>
+            <p>africanoutbacksafaris.com</p>
+          </motion.div>
+        </a>
+        
+        
       </div>
       <motion.form
         animate={{ opacity: 1, x: 0 }}

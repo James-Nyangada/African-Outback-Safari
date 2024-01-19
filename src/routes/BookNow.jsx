@@ -9,6 +9,7 @@ import {useRef} from 'react'
 import { useState } from "react";
 import emailjs from 'emailjs-com'
 
+
 const ContactUs = () => {
   const form = useRef();
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -26,6 +27,40 @@ const ContactUs = () => {
       setIsFormSubmitted(false);
     }, 6000);
   };
+  
+  const [data, setData] =  useState({
+    name: "",
+    email:"",
+    telephone:"",
+    destination:"",
+    message: "",
+
+  });
+
+  const {name, email, telephone, destination,message} = data 
+
+  const handleChange = e=>{
+    setData({...data,[e.target.name]:e.target.value})
+  }
+
+  const handleFormSubmit = async (e) => {
+    // Call both functions when the form is submitted
+    sendEmail(e);
+
+    e.preventDefault();
+    try {
+      const response = await fetch ("https://v1.nocodeapi.com/jam3s/google_sheets/yTjDxWNHxSYwOVmE?tabId=Sheet1",{
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify([[name,email,message,new Date().to.LocaleString()]])
+      });
+      await response.json()
+    } catch (error) {
+      
+    }
+
+  };
+
 
   return (
     <Container>
@@ -117,7 +152,7 @@ const ContactUs = () => {
             </div>
 
             {/* second col ---*/}
-              <form ref={form} onSubmit={sendEmail} className="flex flex-col pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative md1000:w-[65%] md1000:flex md1000:flex-col md1000:mx-auto md1000:mt-14 min800:w-[90%] min620:w-full mr-[40px]">
+              <form ref={form} onSubmit={handleFormSubmit} className="form flex flex-col pt-[30px] pr-[50px] pb-[50px] pl-[45px] bg-[#f8f8f8] relative md1000:w-[65%] md1000:flex md1000:flex-col md1000:mx-auto md1000:mt-14 min800:w-[90%] min620:w-full mr-[40px]">
                 <h3 className="text-[28px] font-bold mb-14">BOOK WITH US NOW! 🥹</h3>
                 <span className="bg-[#4FC0D6] w-[50px] h-[4px] absolute top-[77px]"></span>
                 <input
@@ -125,6 +160,8 @@ const ContactUs = () => {
                   placeholder="Full Name *"
                   type="text"
                   name="name"
+                  value={name}
+                  onChange={handleChange}
                   required
                 ></input>
                 <input
@@ -132,6 +169,8 @@ const ContactUs = () => {
                   placeholder="Email Address *"
                   type="email"
                   name="email"
+                  value={email}
+                  onChange={handleChange}
                   required
                 ></input>
                 <div className="flex mb-8 space-x-4">
@@ -179,9 +218,12 @@ const ContactUs = () => {
                   placeholder="Mobile Phone"
                   type="tel"
                   name="telephone"
+                  value={telephone}
+                  onChange={handleChange}
                   required
                 ></input>
-                <select className="w-full py-[12px] px-[20px] h-[51px] text-[14px] border border-solid border-[#e4e4e4] outline-none mb-8" required name="destination">
+                <select className="w-full py-[12px] px-[20px] h-[51px] text-[14px] border border-solid border-[#e4e4e4] outline-none mb-8" required name="destination" value={destination}
+                  onChange={handleChange}>
                   <option>Select Destination</option>
                   <option>Nairobi</option>
                   <option>Mount Kenya</option>
@@ -224,7 +266,8 @@ const ContactUs = () => {
                 </select>
                 <textarea
                   placeholder="If there is any information you feel is left out kindly add at your pleasure 😜"
-                  className="w-full py-[12px] px-[20px] h-[140px] text-[17px] border border-solid border-[#e4e4e4] outline-none mb-8" name="message"
+                  className="w-full py-[12px] px-[20px] h-[140px] text-[17px] border border-solid border-[#e4e4e4] outline-none mb-8" name="message" value={message}
+                  onChange={handleChange}
                 ></textarea>
                 <button
                   type="submit"
@@ -232,13 +275,15 @@ const ContactUs = () => {
                 >
                   Book Now
                 </button>
-              </form>
 
-              {isFormSubmitted && (
+                {isFormSubmitted && (
                 <div className="bg-green-500 p-4 mt-4 rounded-md">
                   <p className="text-white font-bold">You have successfully booked!</p>
                 </div>
               )}
+              </form>
+
+              
 
           </div>
         </section>
