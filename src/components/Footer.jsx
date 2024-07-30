@@ -101,7 +101,7 @@ const Footer = () => {
                 
               </div>
               <p className="text-[16px] font-medium text-[#FFFFFF]">
-                Privacy Policy | © {new Date().getFullYear()} African Outback Safaris <br />{" "}
+                Privacy Policy | © {new Date().getFullYear()} African Outback Safari <br />{" "}
                 Designed by{" "}
                 <a
                   target="_blank"
