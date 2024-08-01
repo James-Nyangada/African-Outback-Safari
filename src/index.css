@@ -34,11 +34,11 @@ code {
 }
 .btn-link-styles {
   background: white;
-  color: black;
+  color: #8D6E63;
 }
 
 :root {
-  --primaryColor: #4fc0d6;
+  --primaryColor: #8D6E63;
   --primaryColorDark: #2ca0b8;
   --primaryColorLight: #73bbc9b6;
   --secondaryColor: #f1d4e5;
