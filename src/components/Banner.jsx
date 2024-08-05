@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import bannerImg from "../assets/homePageImages/bannerImg2.png";
+import bannerImg from "../assets/homePageImages/bannerImg2.webp";
 import { BsSearch } from "react-icons/bs";
 import { motion } from "framer-motion";
 

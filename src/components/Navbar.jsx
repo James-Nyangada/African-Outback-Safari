@@ -88,7 +88,7 @@ const Navbar = () => {
             }
             onClick={() => setActiveTab("holiday-types")}
           >
-            Holiday Types
+            Packages
           </li>
         </Link>
         <Link to={"/about-us"} className="link-styles">
