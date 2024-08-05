@@ -6,8 +6,8 @@ const Offers = () => {
   return (
     <Container>
       <div className="card">
-        <h2>Get 50% off by Early Booking</h2>
-        <p>Book Now to get 50% off on more than 20 destinations</p>
+        <h2>Get 20% off by Early Booking</h2>
+        <p>Book Now to get 20% off on more than 20 destinations</p>
         <Link to={"/book-now"}>
           <button button>BOOK NOW</button>
         </Link>

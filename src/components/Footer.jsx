@@ -101,7 +101,7 @@ const Footer = () => {
                 
               </div>
               <p className="text-[16px] font-medium text-[#FFFFFF]">
-                Privacy Policy | © {new Date().getFullYear()} African Outback Safari <br />{" "}
+                Privacy Policy | © {new Date().getFullYear()} African Outback Safaris <br />{" "}
                 Designed by{" "}
                 <a
                   target="_blank"
@@ -116,7 +116,7 @@ const Footer = () => {
 
             {/* middle div */}
             <div className="flex flex-col gap-8 relative">
-              <p className="text-[22px] text-[#FFFFFF] font-bold footer-main">PermaLinks</p>
+              <p className="text-[22px] text-[#FFFFFF] font-bold footer-main">African Outback Safaris</p>
 
               <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
               
@@ -204,7 +204,7 @@ const Footer = () => {
                 +254 722 636 346
               </p>
               <p className="text-[16px] text-[#FFFFFF] font-medium">
-                africanoutbacksafaris@gmail.com
+                info@africanoutbacksafaris.com
               </p>
               
             </div>

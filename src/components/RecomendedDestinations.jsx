@@ -23,7 +23,7 @@ const RecomendedDestinations = () => {
 
   return (
     <Container>
-      <h2 className="title">Recomended Destinations</h2>
+      <h2 className="title">Recommended Destinations</h2>
       <div className="cards">
         <div className="card">
           <img src={santorini} alt="" />
@@ -53,7 +53,10 @@ const RecomendedDestinations = () => {
             <h3>South Kenya</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eum quibusdam cumque incidunt sapiente repellendus, culpa non eligendi, corporis, excepturi distinctio voluptatum! Veniam accusamus sequi voluptate eius ut molestiae repudiandae.
+            Discover the iconic Masai Mara Situated in the southwest of Kenya, covering an area of 1,510 square km.
+            The Masai Mara National Reserve is a land of breathtaking vistas, abundant wildlife and endless plains.
+            The quintessential Masai Mara safari delivers many attractions, as the reserve is home to an excellent year-round concentration of game,
+             including the more than two million wildebeest, zebras and other antelopes that make up the famous Great Migration. 
             </p>
             <Link
             to={"/book-now"}
@@ -71,8 +74,11 @@ const RecomendedDestinations = () => {
             <h3>Tanzania</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure saepe iusto voluptatibus similique quasi, officia quo incidunt, eligendi sapiente corrupti blanditiis ratione labore quam harum? Eius autem fuga aspernatur?
-            </p>
+            Conquer Africa's rooftop, Mount Kilimanjaro, a legendary peak beckoning adventurers from around the globe. 
+            Traverse diverse landscapes, from lush rainforests to alpine deserts, on your journey to the summit. 
+            Witness breathtaking sunrises that paint the glaciers in hues of gold and pink.
+            Stand in awe atop Uhuru Peak, the highest point in Africa, and savor the triumph of conquering this majestic mountain.           
+             </p>
             <Link
             to={"/book-now"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
@@ -88,7 +94,10 @@ const RecomendedDestinations = () => {
             <h2>Samburu</h2>
             <img src={fiveStarIcon} alt="" />
             <p>
-             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem minima ipsa quia. Ab in fugiat, deleniti porro impedit quisquam est provident corrupti repudiandae sed praesentium veniam, inventore molestiae maiores at!
+            Experience the untamed beauty of Samburu on our packaged safaris. 
+            Explore the rugged landscapes in search of the Samburu Special Five and other iconic wildlife.
+            Immerse yourself in the vibrant culture of the Samburu people through village visits. 
+            Relax in comfortable lodges and enjoy additional activities like bush walks and camel rides.
             </p>
             <Link
             to={"/book-now"}
@@ -103,11 +112,14 @@ const RecomendedDestinations = () => {
           <img src={mykonos} alt="" />
           <div>
             <h2>Lake Nakuru</h2>
-            <h3>Rift Vallet</h3>
+            <h3>Rift Valley</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, veniam unde provident fugiat eaque qui facere non. Quae velit laborum iusto animi nihil, voluptate asperiores! Maxime nostrum expedita sunt impedit.
-            </p>
+             Journey through the heart of Africa's Great Rift Valley, a breathtaking natural wonder teeming with life.
+             Witness a sea of pink at Lake Nakuru, where thousands of flamingos gather.
+             Embark on thrilling game drives, encountering lions, leopards, and giraffes.
+             Marvel at the dramatic landscapes of towering escarpments and dormant volcanoes, a testament to nature's raw power.            
+             </p>
             <Link
             to={"/book-now"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
@@ -124,7 +136,10 @@ const RecomendedDestinations = () => {
             {/* <h3>Florida, USA</h3> */}
             <img src={fiveStarIcon} alt="" />
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam modi nam, asperiores doloribus veniam provident, suscipit est possimus quibusdam dolor ducimus quas adipisci dolore quos illum natus corporis nihil delectus?
+            Venture into the vast plains of the Serengeti, a wildlife paradise where nature's drama unfolds. 
+            Witness the epic spectacle of the Great Migration, millions of wildebeest and zebras traversing the grasslands. 
+            Encounter prides of lions, herds of elephants, and elusive leopards amidst the acacia trees. 
+            Capture breathtaking sunsets over the endless savannah, where every moment is a masterpiece.           
             </p>
             <Link
             to={"/book-now"}
@@ -142,7 +157,10 @@ const RecomendedDestinations = () => {
             <h3>Lake Manyara</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo tempora nobis veniam ratione quisquam dolorem rerum harum vitae voluptate sit perferendis, ducimus nihil iure, placeat fuga suscipit dignissimos asperiores!
+            Discover Lake Manyara, a scenic gem nestled in the Great Rift Valley. 
+            Witness tree-climbing lions lounging in acacia branches, a sight unique to this park. 
+            Marvel at the vast flocks of flamingos that grace the lake's shores, creating a breathtaking pink spectacle. 
+            Explore the diverse habitats, from lush forests to open grasslands, teeming with elephants, giraffes, and zebras.            
             </p>
             <Link
             to={"/book-now"}
@@ -160,7 +178,10 @@ const RecomendedDestinations = () => {
             {/* <h3>Indonesia</h3> */}
             <img src={fiveStarIcon} alt="" />
             <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestiae recusandae non modi error id architecto nobis voluptas nisi! Enim explicabo quaerat sint sapiente mollitia eaque? Eligendi unde illum reprehenderit.
+            Discover Amboseli, where majestic elephants roam freely against the backdrop of snow-capped Kilimanjaro. 
+            Witness playful elephant families splashing in watering holes, their calves frolicking in the mud. 
+            Capture stunning photographs of these gentle giants as they graze beneath the vast African sky. 
+            Explore the diverse habitats, from swamps to acacia woodlands, teeming with zebras, giraffes, and predators like lions and cheetahs.            
             </p>
             <Link
             to={"/book-now"}
