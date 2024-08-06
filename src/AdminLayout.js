@@ -1,9 +1,9 @@
-import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-const AdminLayout = ({ children }) => {
+const AdminLayout = () => {
   return (
     <div>
-      {children}
+      <Outlet />
     </div>
   );
 };

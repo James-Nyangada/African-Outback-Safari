@@ -37,9 +37,11 @@ import Itinerary from "./routes/Itinerary.jsx";
 import Admin from "./routes/Admin";
 import AdminLayout from "./AdminLayout";
 import { TooltipProvider } from "../src/components/ui/tooltip"; // Adjust the import path based on your project structure
+import ManageBooking from "./routes/ManageBooking";
 
 function App() {
   const location = useLocation();
+  const hideNavbarAndFooter = location.pathname.startsWith('/admin-dashboard');
 
   // Scroll to the top when the route changes
   useEffect(() => {
@@ -49,7 +51,7 @@ function App() {
   return (
     <div className="App">
      <TooltipProvider>
-      {location.pathname !== "/admin-dashboard" && <Navbar />}
+      {!hideNavbarAndFooter && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/destinations" element={<Destinations />} />
@@ -89,12 +91,12 @@ function App() {
           path="/anteliz-suites/anteliz-private-villa"
           element={<AntelizPrivateVilla />}
         />
-        <Route
-          path="/admin-dashboard"
-          element={<AdminLayout><Admin /></AdminLayout>}
-        />
+        <Route path="/admin-dashboard" element={<AdminLayout />}>
+          <Route index element={<Admin />} />
+          <Route path="manage-booking" element={<ManageBooking />} />
+        </Route>
       </Routes>
-      {location.pathname !== "/admin-dashboard" && <Footer />}
+      {!hideNavbarAndFooter && <Footer />}
       </TooltipProvider>
     </div>
   );
