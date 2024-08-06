@@ -101,8 +101,8 @@ const Container = styled.div`
       flex-direction: column;
       align-items: center;
       gap: 1em;
-      background: linear-gradient(145deg, #e6e6e6, #ffffff);
-      box-shadow: 11px 11px 24px #d1d1d1, -11px -11px 24px #ffffff;
+      background: linear-gradient(145deg, #e6e6e6, #E0F7EC);
+      box-shadow: 11px 11px 24px #d1d1d1, -11px -11px 30px -20px #388E3C;
       text-align: center;
       border-radius: 2em;
       .icon {

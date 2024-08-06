@@ -227,8 +227,8 @@ const Container = styled.div`
       justify-content: center;
       align-items: center;
       gap: 2em;
-      background: linear-gradient(145deg, #e6e6e6, #ffffff);
-      box-shadow: 11px 11px 24px #d1d1d1, -11px -11px 24px #ffffff;
+      background: linear-gradient(145deg, #e6e6e6, #E0F7EC);
+      box-shadow: 11px 11px 24px #d1d1d1, -11px -11px 30px -20px #388E3C;
       border-radius: 2em;
       border: 1px solid #e0e0e0;
       position: sticky;
@@ -256,7 +256,7 @@ const Container = styled.div`
       }
       :nth-child(9) {
         top: 21em;
-        background: white;
+        background:  #E0F7EC;
         height: 400px;
         button {
           font-size: 30px;

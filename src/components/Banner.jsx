@@ -54,6 +54,8 @@ const Container = styled.div`
     p {
       color: gray;
       margin-top: 10px;
+      font-weight: 500;
+      font-size: 18px;
     }
     div {
       display: flex;
@@ -62,7 +64,7 @@ const Container = styled.div`
         width: 20em;
         font-size: 17px;
         padding: 15px 20px;
-        box-shadow: 10px 10px 34px #b5b5b5, -10px -10px 34px #ffffff;
+        box-shadow: 10px 10px 34px -20px #388E3C, -10px -10px 34px -20px #388E3C;
         border: none;
         border-radius: 20px 0 0 20px;
         outline: none;

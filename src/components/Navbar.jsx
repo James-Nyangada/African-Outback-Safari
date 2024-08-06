@@ -47,7 +47,7 @@ const Navbar = () => {
     <Container
       style={{
         backgroundColor:
-          pos === "top" ? "rgba(0, 0, 0, 0)" : "rgb(255, 255, 255)",
+          pos === "top" ? "rgba(0, 0, 0, 0)" : "rgb(224, 247, 236)",
       }}
     >
       <Link to={"/"} className="link-styles">
@@ -149,6 +149,7 @@ const Container = styled.div`
   z-index: 100;
   overflow-x: visible;
   transition: 0.2s;
+  box-shadow: 0 2px 70px -20px rgb(56, 142, 60); /* Add this line for border bottom shadow */
   .logo {
     width: 270px;
   }
