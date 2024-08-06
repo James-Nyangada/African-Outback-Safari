@@ -3,7 +3,7 @@ import styled from "styled-components";
 import BlogBox from "./BlogBox";
 
 const BlogContainer = styled.section`
-  background-color: white;
+  background-color: #e0f7ec;
 `;
 
 const BlogContent = styled.div`
