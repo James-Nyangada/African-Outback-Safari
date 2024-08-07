@@ -190,13 +190,14 @@ const Itinerary = () =>{
                         <p className="text-lg font-medium mb-2">Tell us more in order to curate the best safari for you</p>
                         <textarea value={tripDetails.additional} onChange={changeHandler} name="additional" required  placeholder="Enter any additional information you feel is left out" className="w-full border border-zinc-300 rounded p-2 mb-4"></textarea>
                     </div>
+                    <div style={{ position: 'relative' }}>
+                    <button onClick={book_now} className="bg-[#FFEB3B] text-black py-4 px-6 rounded-[15px] hover:bg-[#388E3C] text-center book">Submit</button>
+                    </div>
                     
                 </div>
                 
             </div>
-            <div style={{ position: 'relative' }}>
-                <button onClick={book_now} className="bg-[#FFEB3B] text-black py-4 px-6 rounded-[15px] hover:bg-[#388E3C] book" style={{ position: 'absolute', right: 870 }}>Submit</button>
-            </div>
+            
            
         </Container>
     )
@@ -227,7 +228,18 @@ const Container = styled.div`
     .book{
 
     }
+    @media(max-width: 1354px){
+        width: 100%;
+        max-width: 1200px;
+        margin: 200px auto;
+        .book{
+            right: 600px;
+        } 
+    }
     @media (max-width: 1004px) {
+        width: 100%;
+        max-width: 1200px;
+        margin: 200px auto;
         .form{
             display: flex;
             flex-direction: column;
