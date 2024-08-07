@@ -187,7 +187,7 @@ const Itinerary = () =>{
                         <input value={tripDetails.participants} onChange={changeHandler} name="participants" required type="number" placeholder="Enter Total number of people travelling" className="w-full border border-zinc-300 rounded p-2 mb-4" />
                     </div>
                     <div className="mb-6">
-                        <p className="text-lg font-medium mb-2">Description</p>
+                        <p className="text-lg font-medium mb-2">Tell us more in order to curate the best safari for you</p>
                         <textarea value={tripDetails.additional} onChange={changeHandler} name="additional" required  placeholder="Enter any additional information you feel is left out" className="w-full border border-zinc-300 rounded p-2 mb-4"></textarea>
                     </div>
                     

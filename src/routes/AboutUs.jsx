@@ -77,9 +77,9 @@ const AboutUs = () => {
       />
       <div className="items">
         <div className="item">
-          <h2>Welcome to Travelo</h2>
+          <h2>Welcome to African Outback Safaris</h2>
           <p>
-            At Travelo, we are passionate about curating extraordinary travel
+            At A.O.S, we are passionate about curating extraordinary travel
             experiences that leave lasting impressions. Our mission is to
             inspire and empower travelers to explore the world, fostering
             connections with diverse cultures and landscapes. With a deep-rooted
@@ -90,7 +90,7 @@ const AboutUs = () => {
         <div className="item">
           <h2>Our Journey</h2>
           <p>
-            Founded in 2018, Travelo has been dedicated to crafting personalized
+            Founded in 2015, African Outback Safaris has been dedicated to crafting personalized
             journeys that cater to your aspirations and dreams. Over the years,
             we have earned the trust and loyalty of countless travelers by
             delivering exceptional service and unforgettable adventures.
@@ -136,7 +136,7 @@ const AboutUs = () => {
         <div className="item">
           <h2>Our Promise</h2>
           <p>
-            When you choose Travelo, you embark on a journey that goes beyond
+            When you choose us, you embark on a journey that goes beyond
             the ordinary. Whether you're a seasoned explorer or a first-time
             traveler, we strive to create meaningful and transformative
             experiences that stay with you long after you return home.

@@ -5,7 +5,7 @@ const Statistics = () => {
   return (
     <Container>
       <div className="item">
-        <h3>30+</h3>
+        <h3>20+</h3>
         <h4>YEARS OF EXPERIENCE</h4>
       </div>
       <div className="item">
@@ -17,8 +17,8 @@ const Statistics = () => {
         <h4>CUSTOMER REVIEWS</h4>
       </div>
       <div className="item">
-        <h3>100+</h3>
-        <h4>EXCLUSIVE DEALS</h4>
+        <h3>100%</h3>
+        <h4>CUSTOMIZABLE SAFARIS</h4>
       </div>
     </Container>
   );

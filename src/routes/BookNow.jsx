@@ -79,7 +79,7 @@ const ContactUs = () => {
             className="details"
             >
                 <h1>
-                  Book Your Safari Now!
+                  Customise your entire safari with us!
                 </h1>
             </motion.div>
 
@@ -103,7 +103,7 @@ const ContactUs = () => {
                   </h3>
                   <span className="bg-[#4FC0D6] w-[50px] h-[4px] absolute top-[40px]"></span>
                   <p className="text-[20px] font-medium text-[#646464]">
-                    Nairobi CBD
+                    University Way,CBD
                     <br /> Nairobi, Kenya
                   </p>
                 </div>
@@ -121,8 +121,8 @@ const ContactUs = () => {
                   <h3 className="text-[2rem] font-bold mb-10">Information</h3>
                   <span className="bg-[#4FC0D6] w-[50px] h-[4px] absolute top-[40px]"></span>
                   <div className="text-[17px] font-medium text-[#646464]">
-                    <p>+254 123 456 789</p>
-                    <p>africanoutbacksafaris@gmail.com</p>
+                    <p>+254722636346</p>
+                    <p>info@africanoutbacsafaris.com</p>
                   </div>
                 </div>
                 {/*  */}

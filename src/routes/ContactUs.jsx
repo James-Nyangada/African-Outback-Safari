@@ -24,7 +24,7 @@ const ContactUs = () => {
           <HiLocationMarker className="icon" />
           <h3>OUR MAIN OFFICE</h3>
           <p>
-            P.O Box 50997 <br />
+            Univeristy Way, CBD <br />
             Nairobi
           </p>
         </motion.div>
@@ -42,7 +42,7 @@ const ContactUs = () => {
         >
           <BsFillTelephoneFill className="icon" />
           <h3>PHONE NUMBER</h3>
-          <p>+1 123 123 1234</p>
+          <p>+254722636346</p>
         </motion.div>
 
         <a href="https:////wa.me/254791433046" target="_blank" rel="noreferrer">
@@ -59,7 +59,7 @@ const ContactUs = () => {
           >
             <BsWhatsapp className="icon" />
             <h3>WhatsApp</h3>
-            <p>1-123-456-7890</p>
+            <p>+254722636346</p>
           </motion.div>
         </a>
 
@@ -77,7 +77,7 @@ const ContactUs = () => {
           >
             <AiFillPrinter className="icon" />
             <h3>EMAIL</h3>
-            <p>africanoutbacksafaris.com</p>
+            <p>info@africanoutbacksafaris.com</p>
           </motion.div>
         </a>
         

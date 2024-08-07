@@ -60,7 +60,7 @@ const Testimonials = () => {
         <motion.div animate={animation} className="item">
           <RiDoubleQuotesR className="icon" />
           <p>
-            Immersing myself in new cultures is my passion, and African Outback Safari turned
+            Immersing myself in new cultures is my passion, and African Outback Safaris turned
             my wanderlust into reality. Their in-depth knowledge of local
             traditions and hidden gems led me to authentic experiences I'll
             cherish forever. Thanks to them, I walked the path less traveled and
@@ -77,7 +77,7 @@ const Testimonials = () => {
         <motion.div animate={animation} className="item">
           <RiDoubleQuotesR className="icon" />
           <p>
-            Travelling with kids can be challenging, but African Outback Safari made it a
+            Travelling with kids can be challenging, but African Outback Safaris made it a
             breeze! They crafted a family-friendly trip that kept everyone
             entertained and happy. The thoughtful activities, comfortable
             accommodations, and kid-approved dining options exceeded our
