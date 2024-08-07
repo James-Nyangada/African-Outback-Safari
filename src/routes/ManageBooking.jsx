@@ -94,7 +94,7 @@ const ManageBooking = () =>{
 
     const remove_property = async (id) => {
         try {
-            await axios.delete(`http://localhost:4001/api/deletedestination/${id}`);
+            await axios.delete(`https://african-outback-server.vercel.app/api/deletedestination/${id}`);
             await fetchInfo()
         } catch (error) {
             console.log('Error deleting product', error)
