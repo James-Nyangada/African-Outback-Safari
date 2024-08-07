@@ -71,7 +71,7 @@ const Footer = () => {
 
   return (
     <Container>
-      <footer className="bg-[#2E2E3A]">
+      <footer className="bg-[#388E3C]">
         <div className="container page-padding pb-[5rem] pt-[2rem]">
           {/* footer div all */}
           <div className="flex justify-between min620:flex-col min620:items-center min620:text-center min620:gap-[5rem] !text-left">
@@ -84,19 +84,19 @@ const Footer = () => {
               {/* socials */}
               <div className="flex gap-7 text-[18px] text-[#FFFFFF] min540:justify-center">
                 <a href="https://www.instagram.com/">
-                  <AiFillInstagram className="text-[35px] hover:text-[#4FC0D6]"/>
+                  <AiFillInstagram className="text-[35px] hover:text-[#FFEB3B]"/>
                 </a>
 
                 <a href="https://www.instagram.com/">
-                  <AiFillTwitterCircle className="text-[35px] hover:text-[#4FC0D6]" />
+                  <AiFillTwitterCircle className="text-[35px] hover:text-[#FFEB3B]" />
                 </a>
                 
                 <a href="https://www.instagram.com/">
-                  <BsFacebook className="text-[35px] hover:text-[#4FC0D6]" />
+                  <BsFacebook className="text-[35px] hover:text-[#FFEB3B]" />
                 </a>
                 
                 <a href="https://www.instagram.com/">
-                  <SiGmail className="text-[35px] hover:text-[#4FC0D6]" />
+                  <SiGmail className="text-[35px] hover:text-[#FFEB3B]" />
                 </a>
                 
               </div>
@@ -106,10 +106,10 @@ const Footer = () => {
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://jam3s.netlify.app/"
-                  class="text-[#4FC0D6] font-bold"
+                  href="https://estetica-agency.vercel.app/"
+                  class="text-[#FFEB3B] font-bold"
                 >
-                  JAM3S.DEV
+                  ESTETICA AGENCY
                 </a>
               </p>
             </div>
@@ -118,40 +118,40 @@ const Footer = () => {
             <div className="flex flex-col gap-8 relative">
               <p className="text-[22px] text-[#FFFFFF] font-bold footer-main">African Outback Safaris</p>
 
-              <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
+              <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#FFEB3B]"></span>
               
               <Link to={"/"}>
-                <p className="text-[16px] hover:text-[#4FC0D6] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
+                <p className="text-[16px] hover:text-[#FFEB3B] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
                   Home
                 </p>
               </Link>
               
               <Link to={"/destinations"}>
-                <p className="text-[16px] hover:text-[#4FC0D6] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
+                <p className="text-[16px] hover:text-[#FFEB3B] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
                   Destinations
                 </p>
               </Link>
               
               <Link to={"/holiday-types"}>
-                <p className="text-[16px] hover:text-[#4FC0D6] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
+                <p className="text-[16px] hover:text-[#FFEB3B] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
                   Holiday Types
                 </p>
               </Link>
               
               <Link to={"/about-us"}>
-                <p className="text-[16px] hover:text-[#4FC0D6] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
+                <p className="text-[16px] hover:text-[#FFEB3B] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
                   About Us
                 </p>
               </Link>
               
               <Link to={"/blog"}>
-                <p className="text-[16px] hover:text-[#4FC0D6] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
+                <p className="text-[16px] hover:text-[#FFEB3B] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
                   Blog
                 </p>
               </Link>
               
               <Link to={"/contact-us"}>
-                <p className="text-[16px] hover:text-[#4FC0D6] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
+                <p className="text-[16px] hover:text-[#FFEB3B] cursor-pointer text-[#FFFFFF] font-medium hover:font-bold">
                   Contact Us
                 </p>
               </Link>
@@ -163,7 +163,7 @@ const Footer = () => {
         Subscribe to our Newsletter
       </p>
 
-      <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
+      <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#FFEB3B]"></span>
 
       <div className="flex flex-col gap-4">
 
@@ -175,13 +175,13 @@ const Footer = () => {
     id="email"
     name="email"
     placeholder="Enter your email"
-    className="border border-[#4FC0D6] rounded p-2 text-[16px] text-black" 
+    className="border border-[#FFEB3B] rounded p-2 text-[16px] text-black" 
     onChange={handleEmailChange}
   />
 </div>
 
       <button
-        className="bg-[#4FC0D6] text-[16px] text-[#FFFFFF] py-2 px-4 rounded hover:bg-opacity-80"
+        className="bg-[#FFEB3B] text-[16px] text-[#33333] py-2 px-4 rounded hover:bg-opacity-80"
         onClick={handleClick}
         disabled={loading}
       >
@@ -198,7 +198,7 @@ const Footer = () => {
             <div className="flex flex-col gap-8 relative">
               <p className="text-[22px] font-bold text-[#FFFFFF] footer-main">Contacts</p>
 
-              <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#4FC0D6]"></span>
+              <span className="top-[33px] absolute w-[7rem] h-[4px] bg-[#FFEB3B]"></span>
 
               <p className="text-[16px]  text-[#FFFFFF] font-bold">
                 +254 722 636 346

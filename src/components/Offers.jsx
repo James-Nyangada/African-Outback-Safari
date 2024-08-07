@@ -8,8 +8,8 @@ const Offers = () => {
       <div className="card">
         <h2>Get 20% off by Early Booking</h2>
         <p>Book Now to get 20% off on more than 20 destinations</p>
-        <Link to={"/book-now"}>
-          <button button>BOOK NOW</button>
+        <Link to={"/create-booking"}>
+          <button className="book-now">BOOK NOW</button>
         </Link>
         
       </div>
@@ -43,8 +43,8 @@ const Container = styled.div`
       font-family: "Poppins", sans-serif;
       font-size: 15px;
       border: none;
-      background: #333333;
-      color: white;
+      background: #FFEB3B;
+      color: black;
       border-radius: 7px;
       margin-top: 10px;
       :hover {

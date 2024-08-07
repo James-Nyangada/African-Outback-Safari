@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import bannerImg from "../assets/destinationsPageImages/bannerMapImg.png";
-import { BsSearch } from "react-icons/bs";
+import bannerImg from "../assets/destinationsPageImages/bannerMapImg.webp";
 import data from "../components/destinationsData";
 import { AiTwotoneStar } from "react-icons/ai";
 import { motion } from "framer-motion";
@@ -32,15 +31,16 @@ const Destinations = () => {
           }}
         >
           <h1>
-            Adventure awaits. <br /> Explore the East Africa with us.
+            Adventure awaits. <br /> Explore the East Africa <br/> with us.
           </h1>
           <p>Choose your favorite from East Africa's top Destinations</p>
-          <div>
-            <input type="text" placeholder="Choose Your Destination..." />
-            <button>
-              <BsSearch className="icon" />
-            </button>
-          </div>
+          <Link
+            to={"/create-booking"}
+            className="book-now"
+            
+            >
+            <button>Plan your own trip!</button>
+          </Link> 
         </motion.div>
         <motion.img
           animate={{ opacity: 1, x: 0 }}
@@ -187,6 +187,8 @@ const Container = styled.div`
       p {
         color: gray;
         margin-top: 10px;
+        font-size: 18px;
+        font-weight: 500;
       }
       div {
         display: flex;
@@ -213,10 +215,29 @@ const Container = styled.div`
       }
     }
     .bannerImg {
-      width: 42%;
-      max-width: 700px;
+      width: 45%;
+      max-width: 720px;
+      border-radius: 40px;
     }
   }
+  button {
+          padding: 15px 18px;
+          font-family: "Poppins", sans-serif;
+          font-size: 15px;
+          border: none;
+          background: #FFEB3B;
+          color: black;
+          border-radius: 7px;
+          margin-top: 10px;
+          :hover {
+            background: var(--primaryColorDark);
+            transition: 0.3s;
+            cursor: pointer;
+            :nth-child(2) {
+              background-color: var(--secondaryBackgroundColor);
+            }
+          }
+        }
 
   .continent {
     padding: 0 4%;

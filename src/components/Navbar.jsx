@@ -118,7 +118,7 @@ const Navbar = () => {
         </Link>
         <div className="buttons">
            <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive"}
             onClick={() => setActiveTab("book-now")}
           >
@@ -174,8 +174,8 @@ const Container = styled.div`
         font-family: "Poppins", sans-serif;
         font-size: 15px;
         border: none;
-        background: #333333;
-        color: white;
+        background: #FFEB3B;
+        color: black;
         border-radius: 7px;
         :hover {
           background: var(--primaryColorDark);

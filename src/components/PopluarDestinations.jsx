@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import santorini from "../assets/homePageImages/santorini.webp";
-import dubai from "../assets/homePageImages/dubai.jpg";
-import thailand from "../assets/homePageImages/thailand.jpg";
-import hawaii from "../assets/homePageImages/hawaii.jpg";
+import dubai from "../assets/homePageImages/dubai.webp";
+import thailand from "../assets/homePageImages/thailand.webp";
+import hawaii from "../assets/homePageImages/hawaii.webp";
 import { AiTwotoneStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -32,9 +32,9 @@ const PopluarDestinations = () => {
     <Container>
       <h1>Popluar Destinations</h1>
       <div className="items" ref={ref}>
-        <Link to={"/mount-kilimanjaro"} className="link-styles">
+        <Link to={"/"} className="link-styles">
           <motion.div animate={animation} className="item">
-            <img src={santorini} alt="" />
+            <img src={santorini} alt="" className="images"/>
             <h2>Mt Kilimanjaro</h2>
             <span>
               <h3>
@@ -46,9 +46,9 @@ const PopluarDestinations = () => {
             </span>
           </motion.div>
         </Link>
-        <Link to={"/mount-kenya"} className="link-styles">
+        <Link to={"/"} className="link-styles">
           <motion.div animate={animation} className="item">
-            <img src={dubai} alt="" />
+            <img src={dubai} alt="" className="images"/>
             <h2>Mount Kenya</h2>
             <span>
               <h3>
@@ -63,7 +63,7 @@ const PopluarDestinations = () => {
 
         <Link>
           <motion.div animate={animation} className="item">
-            <img src={thailand} alt="" />
+            <img src={thailand} alt="" className="images"/>
             <h2>Coast</h2>
             <span>
               <h3>
@@ -76,9 +76,9 @@ const PopluarDestinations = () => {
           </motion.div>
         </Link>
 
-        <Link to={"/maasai-mara"} className="link-styles">
+        <Link to={"/"} className="link-styles">
           <motion.div animate={animation} className="item">
-            <img src={hawaii} alt="" />
+            <img src={hawaii} alt="" className="images"/>
             <h2>Masaai Mara</h2>
             <span>
               <h3>
@@ -109,6 +109,10 @@ const Container = styled.div`
     background: var(--gradientBackground);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .images{
+    width: 250px;
+    height: 170px;
   }
   .items {
     display: flex;

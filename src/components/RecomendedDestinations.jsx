@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import styled from "styled-components";
-import santorini from "../assets/homePageImages/santoriniImg.jpg";
-import dubai from "../assets/homePageImages/dubaiImg.jpg";
-import maldives from "../assets/homePageImages/maldives.jpg";
-import hawaii from "../assets/homePageImages/hawaii.jpg";
-import miami from "../assets/homePageImages/miamiImg.jpg";
-import ksamil from "../assets/homePageImages/ksamil.png";
+import santorini from "../assets/homePageImages/santoriniImg.webp";
+import dubai from "../assets/homePageImages/dubaiImg.webp";
+import maldives from "../assets/homePageImages/maldives.webp";
+import hawaii from "../assets/homePageImages/hawaii2.webp";
+import miami from "../assets/homePageImages/miamiImg.webp";
+import ksamil from "../assets/homePageImages/lakeManyara.webp";
 import mykonos from "../assets/homePageImages/mykonosImg.webp";
-import bali from "../assets/homePageImages/bali.jpg";
+import bali from "../assets/homePageImages/bali.webp";
 import fiveStarIcon from "../assets/homePageImages/5starsIcon.png";
 import { Link } from "react-router-dom";
 
@@ -38,7 +38,7 @@ const RecomendedDestinations = () => {
               be admired in Santorini.
             </p>
             <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
@@ -47,11 +47,11 @@ const RecomendedDestinations = () => {
           </div>
         </div>
         <div className="card">
-          <img src={dubai} alt="" />
+          <img src={dubai} alt="" className="object-fit h-[400px]"/>
           <div>
             <h2>MassaiMara</h2>
             <h3>South Kenya</h3>
-            <img src={fiveStarIcon} alt="" />
+            <img src={fiveStarIcon} alt=""/>
             <p>
             Discover the iconic Masai Mara Situated in the southwest of Kenya, covering an area of 1,510 square km.
             The Masai Mara National Reserve is a land of breathtaking vistas, abundant wildlife and endless plains.
@@ -59,7 +59,7 @@ const RecomendedDestinations = () => {
              including the more than two million wildebeest, zebras and other antelopes that make up the famous Great Migration. 
             </p>
             <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
@@ -80,7 +80,7 @@ const RecomendedDestinations = () => {
             Stand in awe atop Uhuru Peak, the highest point in Africa, and savor the triumph of conquering this majestic mountain.           
              </p>
             <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
@@ -89,7 +89,7 @@ const RecomendedDestinations = () => {
           </div>
         </div>
         <div className="card">
-          <img src={hawaii} alt="" />
+          <img src={hawaii} alt="" className="h-[400px]" />
           <div>
             <h2>Samburu</h2>
             <img src={fiveStarIcon} alt="" />
@@ -100,7 +100,7 @@ const RecomendedDestinations = () => {
             Relax in comfortable lodges and enjoy additional activities like bush walks and camel rides.
             </p>
             <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
@@ -121,7 +121,7 @@ const RecomendedDestinations = () => {
              Marvel at the dramatic landscapes of towering escarpments and dormant volcanoes, a testament to nature's raw power.            
              </p>
             <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
@@ -133,7 +133,7 @@ const RecomendedDestinations = () => {
           <img src={miami} alt="" />
           <div>
             <h2>Serengeti</h2>
-            {/* <h3>Florida, USA</h3> */}
+            <h3>Serengeti National Park</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
             Venture into the vast plains of the Serengeti, a wildlife paradise where nature's drama unfolds. 
@@ -142,7 +142,7 @@ const RecomendedDestinations = () => {
             Capture breathtaking sunsets over the endless savannah, where every moment is a masterpiece.           
             </p>
             <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
@@ -154,7 +154,7 @@ const RecomendedDestinations = () => {
           <img src={ksamil} alt="" />
           <div>
             <h2>Tanzania</h2>
-            <h3>Lake Manyara</h3>
+            <h3>Lake Manyara National Park</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
             Discover Lake Manyara, a scenic gem nestled in the Great Rift Valley. 
@@ -163,7 +163,7 @@ const RecomendedDestinations = () => {
             Explore the diverse habitats, from lush forests to open grasslands, teeming with elephants, giraffes, and zebras.            
             </p>
             <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
@@ -175,7 +175,7 @@ const RecomendedDestinations = () => {
           <img src={bali} alt="" />
           <div>
             <h2>Amboseli</h2>
-            {/* <h3>Indonesia</h3> */}
+            <h3>Amboseli National Park</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
             Discover Amboseli, where majestic elephants roam freely against the backdrop of snow-capped Kilimanjaro. 
@@ -184,7 +184,7 @@ const RecomendedDestinations = () => {
             Explore the diverse habitats, from swamps to acacia woodlands, teeming with zebras, giraffes, and predators like lions and cheetahs.            
             </p>
             <Link
-            to={"/book-now"}
+            to={"/create-booking"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
@@ -292,8 +292,8 @@ const Container = styled.div`
           font-family: "Poppins", sans-serif;
           font-size: 15px;
           border: none;
-          background: #333333;
-          color: white;
+          background: #FFEB3B;
+          color: black;
           border-radius: 7px;
           margin-top: 10px;
           :hover {

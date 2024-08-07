@@ -31,7 +31,7 @@ const MountKenyaPage = () => {
         >
           <h2>Discover the Jewel of Mt Kenya With African Outback Safaris</h2>
           <p>A Fusion of Skyscraping Dreams and Desert Mystique.</p>
-          <Link to={"/book-now"} >
+          <Link to={"/create-booking"} >
             <button>Book NOW</button>
           </Link>
         </motion.div>
@@ -68,7 +68,7 @@ const MountKenyaPage = () => {
                 <Link to={`${item.link}`} className="link-styles">
                   <button>More Details</button>
                 </Link>
-                <Link to={"/book-now"} className="link-styles">
+                <Link to={"/create-booking"} className="link-styles">
                   <button>Book NOW</button>
                 </Link>
                 

@@ -49,6 +49,8 @@ const Itinerary = () =>{
             <div className="form">
                 <div className="form-left">
                     <h1>Create your travel plan right now</h1>
+                    <p className="text-[20px]">Empowering Journeys Enchanting Memories.</p>
+                    <p className="text-[18px]">Plan your trip with the click of a button to any destionation in Kenya of your choice</p>
                 </div>
                 <div className="form-right">
                     <div>
@@ -193,7 +195,7 @@ const Itinerary = () =>{
                 
             </div>
             <div style={{ position: 'relative' }}>
-                <button onClick={book_now} className="bg-zinc-500 text-white py-2 px-4 rounded book" style={{ position: 'absolute', right: 880 }}>Submit</button>
+                <button onClick={book_now} className="bg-[#FFEB3B] text-black py-4 px-6 rounded-[15px] hover:bg-[#388E3C] book" style={{ position: 'absolute', right: 870 }}>Submit</button>
             </div>
            
         </Container>
@@ -224,6 +226,32 @@ const Container = styled.div`
     }
     .book{
 
+    }
+    @media (max-width: 1004px) {
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-right{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 500px) {
+        .form-left{
+            h1{
+                font-size: 1.5rem;
+            }
+        }
+    
+    }
+    @media (max-width: 370px) {
+        .form-left{
+            h1{
+                font-size: 1.2rem;
+            }
+        }
     }
 `;
 export default Itinerary

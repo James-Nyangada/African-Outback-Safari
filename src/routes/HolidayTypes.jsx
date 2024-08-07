@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import bannerImg from "../assets/otherPagesImages/ht-bannerImg.jpg";
+import bannerImg from "../assets/otherPagesImages/ht-bannerImg.webp";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HolidayTypes = () => {
   useEffect(() => {
@@ -44,7 +45,10 @@ const HolidayTypes = () => {
               landscapes and luxurious accommodations, tailor-made for the two
               of you.
             </p>
-            <button>See the Offers</button>
+            <Link to={"/create-booking"}>
+              <button>Plan Your trip</button>
+            </Link>
+            
           </div>
         </div>
         <div className="card">
@@ -61,7 +65,9 @@ const HolidayTypes = () => {
               discover cultural wonders, and create memories that bond you
               forever.
             </p>
-            <button>See the Offers</button>
+            <Link to={"/create-booking"}>
+              <button>Plan Your trip</button>
+            </Link>
           </div>
         </div>
         <div className="card">
@@ -77,7 +83,9 @@ const HolidayTypes = () => {
               relaxation for adults, our family-friendly destinations ensure
               everyone finds joy and relaxation.
             </p>
-            <button>See the Offers</button>
+             <Link to={"/create-booking"}>
+              <button>Plan Your trip</button>
+            </Link>
           </div>
         </div>
         <div className="card">
@@ -93,7 +101,9 @@ const HolidayTypes = () => {
               provide opportunities to meet fellow travelers, immerse yourself
               in local culture, and uncover hidden gems at your own pace.
             </p>
-            <button>See the Offers</button>
+             <Link to={"/create-booking"}>
+              <button>Plan Your trip</button>
+            </Link>
           </div>
         </div>
         <div className="card">
@@ -110,12 +120,14 @@ const HolidayTypes = () => {
               cuisine, and enjoy personalized service that caters to your every
               desire.
             </p>
-            <button>See the Offers</button>
+             <Link to={"/create-booking"}>
+              <button>Plan Your trip</button>
+            </Link>
           </div>
         </div>
         <div className="card">
           <img
-            src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/3281700261001/85ffb6b6-8ffc-4356-ab1c-7dbf640e2783/3273d036-cd95-43cc-86ef-33e0a82aa0d0/1280x720/match/image.jpg"
+            src="https://www.safariventures.com/wp-content/uploads/2019/08/DSC8658-2.jpg"
             alt=""
           />
           <div>
@@ -123,7 +135,9 @@ const HolidayTypes = () => {
             <p>
             Embark on a safari odyssey that blends discovery, luxury, and awe-inspiring landscapes. Our safari adventures transport you to the heart of the wild, awakening to new wonders each day. Let the savannah be your guide, where every trail unveils a gateway to extraordinary memories.
             </p>
-            <button>See the Offers</button>
+             <Link to={"/create-booking"}>
+              <button>Plan Your trip</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -224,8 +238,8 @@ const Container = styled.div`
           font-family: "Poppins", sans-serif;
           font-size: 15px;
           border: none;
-          background: #333333;
-          color: white;
+          background: #FFEB3B;
+          color: black;
           border-radius: 7px;
           margin-top: 10px;
           :hover {

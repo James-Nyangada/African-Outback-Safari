@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { FaLayerGroup } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import { FaChevronRight } from "react-icons/fa";
-import bannerImg from "../assets/otherPagesImages/ht-bannerImg.jpg";
+import bannerImg from "../assets/otherPagesImages/bannerImg.webp";
 import blog1 from "../assets/blogPageImages/blog1.jpg"
 
 

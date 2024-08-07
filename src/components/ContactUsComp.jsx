@@ -131,8 +131,8 @@ const Container = styled.div`
       font-family: "Poppins", sans-serif;
       font-size: 17px;
       border: none;
-      background: #333333;
-      color: white;
+      background: #FFEB3B;
+      color: black;
       border-radius: 7px;
       :hover {
         background: var(--primaryColorDark);

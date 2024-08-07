@@ -89,7 +89,7 @@ const AntelizHotel = () => {
                 From <h2>{item.price}€</h2>
               </span>
               <div className="btns">
-                <Link to={`${item.link}`} className="link-styles">
+                <Link to={`/create-booking`} className="link-styles">
                   <button>DISCOVER</button>
                 </Link>
                 <button>BOOK NOW</button>

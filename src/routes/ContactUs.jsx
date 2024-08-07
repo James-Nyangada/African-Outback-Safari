@@ -130,7 +130,7 @@ const Container = styled.div`
       justify-content: center;
       text-align: center;
       border: none;
-      box-shadow: 7px 7px 12px #a8a8a8, -7px -7px 12px #ffffff;
+      box-shadow: 7px 7px 12px -8px #388E3C, -7px -7px 12px -10px #388E3C;
       gap: 7px;
       border-radius: 20px;
       .icon {
@@ -168,13 +168,13 @@ const Container = styled.div`
       outline: none;
       font-size: 16px;
       width: 100%;
-      box-shadow: 7px 7px 12px #a8a8a8, -4px -4px 12px #ffffff;
+      box-shadow: 7px 7px 12px -8px #388E3C, -7px -7px 12px -10px #388E3C;
     }
     textarea {
       margin-top: 12px;
       border-radius: 20px;
       border: 2px solid transparent;
-      box-shadow: 7px 7px 12px #a8a8a8, -7px -7px 12px #ffffff;
+      box-shadow: 7px 7px 12px -8px #388E3C, -7px -7px 12px -10px #388E3C;
       padding: 14px 20px;
       font-family: "Poppins", sans-serif;
       outline: none;
@@ -187,8 +187,8 @@ const Container = styled.div`
       font-family: "Poppins", sans-serif;
       font-size: 17px;
       border: none;
-      background: #333333;
-      color: white;
+      background: #FFEB3B;
+      color: black;
       border-radius: 7px;
       :hover {
         background: var(--primaryColorDark);

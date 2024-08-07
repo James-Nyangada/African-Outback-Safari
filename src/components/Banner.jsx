@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import bannerImg from "../assets/homePageImages/bannerImg2.webp";
-import { BsSearch } from "react-icons/bs";
+/* import { BsSearch } from "react-icons/bs"; */
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -17,13 +18,19 @@ const Banner = () => {
           Life is short, and the <br /> world is wide. <br /> Let's safari!
         </h1>
         <p>Travel far, travel wide, and let your soul dance with giraffes. <br />No apologies just wild fun ahead</p>
-        {/* <button>LET'S TRAVEL</button> */}
-        <div>
+        <Link
+            to={"/create-booking"}
+            className="book-now"
+            
+            >
+            <button>Plan your own trip!</button>
+        </Link> 
+        {/* <div>
           <input type="text" placeholder="Choose Your Destination..." />
           <button>
             <BsSearch className="icon" />
           </button>
-        </div>
+        </div> */}
       </motion.div>
       <motion.img
         animate={{ x: 0 }}
@@ -82,9 +89,28 @@ const Container = styled.div`
     }
   }
   .bannerImg {
-    width: 42%;
-    max-width: 700px;
+    width: 45%;
+    max-width: 720px;
+    border-radius: 40px;
   }
+  button {
+          padding: 15px 18px;
+          font-family: "Poppins", sans-serif;
+          font-size: 15px;
+          border: none;
+          background: #FFEB3B;
+          color: black;
+          border-radius: 7px;
+          margin-top: 10px;
+          :hover {
+            background: var(--primaryColorDark);
+            transition: 0.3s;
+            cursor: pointer;
+            :nth-child(2) {
+              background-color: var(--secondaryBackgroundColor);
+            }
+          }
+        }
   @media (min-width: 1440px) {
     margin-top: 10em;
     .leftSide {
