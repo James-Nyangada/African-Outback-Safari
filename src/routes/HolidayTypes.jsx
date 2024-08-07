@@ -44,7 +44,7 @@ const HolidayTypes = () => {
               landscapes and luxurious accommodations, tailor-made for the two
               of you.
             </p>
-            <button>See the Offers</button>
+            <button>Let's customise</button>
           </div>
         </div>
         <div className="card">
@@ -61,7 +61,7 @@ const HolidayTypes = () => {
               discover cultural wonders, and create memories that bond you
               forever.
             </p>
-            <button>See the Offers</button>
+            <button>Let's Customise</button>
           </div>
         </div>
         <div className="card">
@@ -77,7 +77,7 @@ const HolidayTypes = () => {
               relaxation for adults, our family-friendly destinations ensure
               everyone finds joy and relaxation.
             </p>
-            <button>See the Offers</button>
+            <button>Let's Customise</button>
           </div>
         </div>
         <div className="card">
@@ -93,7 +93,7 @@ const HolidayTypes = () => {
               provide opportunities to meet fellow travelers, immerse yourself
               in local culture, and uncover hidden gems at your own pace.
             </p>
-            <button>See the Offers</button>
+            <button>Let's Customise</button>
           </div>
         </div>
         <div className="card">
@@ -110,7 +110,7 @@ const HolidayTypes = () => {
               cuisine, and enjoy personalized service that caters to your every
               desire.
             </p>
-            <button>See the Offers</button>
+            <button>Let's Customise</button>
           </div>
         </div>
         <div className="card">
@@ -121,12 +121,20 @@ const HolidayTypes = () => {
           <div>
             <h2>Safari Adventure</h2>
             <p>
-            Embark on a safari odyssey that blends discovery, luxury, and awe-inspiring landscapes. Our safari adventures transport you to the heart of the wild, awakening to new wonders each day. Let the savannah be your guide, where every trail unveils a gateway to extraordinary memories.
+            Embark on a safari odyssey that blends discovery, luxury, and awe-inspiring landscapes. 
+            Our safari adventures transport you to the heart of the wild, awakening to new wonders each day.
+            Let the savannah be your guide, where every trail unveils a gateway to extraordinary memories.
             </p>
-            <button>See the Offers</button>
+            <button>Let's Customise</button>
           </div>
         </div>
+        <div className="card">
+          <img
+            src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/3281700261001/85ffb6b6-8ffc-4356-ab1c-7dbf640e2783/3273d036-cd95-43cc-86ef-33e0a82aa0d0/1280x720/match/image.jpg"
+            alt=""
+          />
       </div>
+    </div>
     </Container>
   );
 };

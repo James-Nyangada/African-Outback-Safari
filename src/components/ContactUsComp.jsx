@@ -13,14 +13,14 @@ const ContactUsComp = () => {
           <HiLocationMarker className="icon" />
           <h3>OUR MAIN OFFICE</h3>
           <p>
-            P.O Box 50997 <br />
+            Univerisity Way<br />
             Nairobi Kenya
           </p>
         </div>
         <div className="item">
           <BsFillTelephoneFill className="icon" />
           <h3>PHONE NUMBER</h3>
-          <p>+1 123 123 1234</p>
+          <p>+254722636346</p>
         </div>
        {/*  <div className="item">
           <MdEmail className="icon" />
@@ -31,7 +31,7 @@ const ContactUsComp = () => {
           <div className="item " >
             <AiFillPrinter className="icon" />
             <h3>EMAIL</h3>
-            <p>africanoutback <br /> safari@gmail.com</p>
+            <p>info@<br/>africanoutbacksafaris.com</p>
           </div>
         </a>
         

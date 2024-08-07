@@ -30,7 +30,7 @@ const PopluarDestinations = () => {
   }, [inView, hasAnimated, animation]);
   return (
     <Container>
-      <h1>Popluar Destinations</h1>
+      <h1>Popular Destinations</h1>
       <div className="items" ref={ref}>
         <Link to={"/mount-kilimanjaro"} className="link-styles">
           <motion.div animate={animation} className="item">

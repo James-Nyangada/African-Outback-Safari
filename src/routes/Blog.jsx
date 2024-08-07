@@ -44,7 +44,7 @@ function Blog() {
               </p>
               <h2 className="blog__title text-[3rem] font-bold mb-6">Travel around Kenya</h2>
               <p className="blog__info font-medium text-[16px] text-[#646464] mb-24">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam voluptatum molestias facere rem ea. Excepturi magni vel facilis, fugit, nemo provident veniam laboriosam est voluptatibus facere, labore assumenda corporis officiis.
+                COMING SOON
               </p>
               
 
@@ -58,7 +58,7 @@ function Blog() {
               </p>
               <h2 className="blog__title text-[3rem] font-bold mb-6">Travel around Kenya</h2>
               <p className="blog__info font-medium text-[16px] text-[#646464] mb-24">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam voluptatum molestias facere rem ea. Excepturi magni vel facilis, fugit, nemo provident veniam laboriosam est voluptatibus facere, labore assumenda corporis officiis.
+              COMING SOON              
               </p>
               
 
@@ -72,7 +72,21 @@ function Blog() {
               </p>
               <h2 className="blog__title text-[3rem] font-bold mb-6">Travel around Kenya</h2>
               <p className="blog__info font-medium text-[16px] text-[#646464] mb-24">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam voluptatum molestias facere rem ea. Excepturi magni vel facilis, fugit, nemo provident veniam laboriosam est voluptatibus facere, labore assumenda corporis officiis.
+              COMING SOON             
+             </p>
+              
+
+            </div>
+            
+            <div className="blog-list">
+              <img src={blog1}alt="" />
+              <p className="flex font-medium text-[14px] text-[#646464] pt-8 pb-4">
+                <FaLayerGroup className="text-[#4FC0D6] text-[16px]"/>
+                &nbsp; By <b>Admin</b> | March 11, 2023 | Travel
+              </p>
+              <h2 className="blog__title text-[3rem] font-bold mb-6">Travel around Kenya</h2>
+              <p className="blog__info font-medium text-[16px] text-[#646464] mb-24">
+              COMING SOON              
               </p>
               
 
@@ -86,7 +100,7 @@ function Blog() {
               </p>
               <h2 className="blog__title text-[3rem] font-bold mb-6">Travel around Kenya</h2>
               <p className="blog__info font-medium text-[16px] text-[#646464] mb-24">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam voluptatum molestias facere rem ea. Excepturi magni vel facilis, fugit, nemo provident veniam laboriosam est voluptatibus facere, labore assumenda corporis officiis.
+              COMING SOON              
               </p>
               
 
@@ -100,21 +114,7 @@ function Blog() {
               </p>
               <h2 className="blog__title text-[3rem] font-bold mb-6">Travel around Kenya</h2>
               <p className="blog__info font-medium text-[16px] text-[#646464] mb-24">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam voluptatum molestias facere rem ea. Excepturi magni vel facilis, fugit, nemo provident veniam laboriosam est voluptatibus facere, labore assumenda corporis officiis.
-              </p>
-              
-
-            </div>
-            
-            <div className="blog-list">
-              <img src={blog1}alt="" />
-              <p className="flex font-medium text-[14px] text-[#646464] pt-8 pb-4">
-                <FaLayerGroup className="text-[#4FC0D6] text-[16px]"/>
-                &nbsp; By <b>Admin</b> | March 11, 2023 | Travel
-              </p>
-              <h2 className="blog__title text-[3rem] font-bold mb-6">Travel around Kenya</h2>
-              <p className="blog__info font-medium text-[16px] text-[#646464] mb-24">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam voluptatum molestias facere rem ea. Excepturi magni vel facilis, fugit, nemo provident veniam laboriosam est voluptatibus facere, labore assumenda corporis officiis.
+              COMING SOON               
               </p>
               
 
