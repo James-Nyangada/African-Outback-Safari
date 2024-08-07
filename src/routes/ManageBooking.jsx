@@ -8,7 +8,7 @@ import {
   Home,
   LineChart,
   ListFilter,
-  MoreHorizontal,
+
   Package,
   Package2,
   PanelLeft,
@@ -77,7 +77,7 @@ const ManageBooking = () =>{
 
     const fetchInfo = async () => {
         try {
-            const response = await axios.get('http://localhost:4001/api/getdestination');
+            const response = await axios.get('https://african-outback-server.vercel.app/api/getdestination');
             const data = response.data.destination; // Adjusted to access the destination array
             setAllBooking(data);
             console.log('Booking rendered successfully');

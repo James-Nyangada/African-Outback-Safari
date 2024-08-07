@@ -32,7 +32,7 @@ const Itinerary = () =>{
     const book_now = async () =>{
         console.log(tripDetails);
         try{
-            const addTripResponse = await axios.post('http://localhost:4001/api/bookdestination', tripDetails)
+            const addTripResponse = await axios.post('https://african-outback-server.vercel.app/api/bookdestination', tripDetails)
 
             if(addTripResponse.data.success){
                 alert("Trip booked successfully")

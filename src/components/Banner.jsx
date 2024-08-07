@@ -45,7 +45,7 @@ const Banner = () => {
 };
 const Container = styled.div`
   padding: 0 4%;
-  margin-top: 5.3em;
+  margin-top: 5.5em;
   display: flex;
   justify-content: center;
   align-items: center;
