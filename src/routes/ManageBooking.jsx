@@ -114,7 +114,7 @@ const ManageBooking = () =>{
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="#"
+                to={"/admin-dashboard"}
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
                 <Home className="h-5 w-5" />
@@ -126,14 +126,14 @@ const ManageBooking = () =>{
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="#"
+                to={"/admin-dashboard/manage-booking"}
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
-                <ShoppingCart className="h-5 w-5" />
-                <span className="sr-only">Orders</span>
+                <Package className="h-5 w-5" />
+                <span className="sr-only">Manage Booking</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Orders</TooltipContent>
+            <TooltipContent side="right">Manage Booking</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -141,11 +141,11 @@ const ManageBooking = () =>{
                 href="#"
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
-                <Package className="h-5 w-5" />
-                <span className="sr-only">Manage Booking</span>
+                <ShoppingCart className="h-5 w-5" />
+                <span className="sr-only">Orders</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Manage Booking</TooltipContent>
+            <TooltipContent side="right">Orders</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -206,25 +206,25 @@ const ManageBooking = () =>{
                   <span className="sr-only">African Outback safaris</span>
                 </Link>
                 <Link
-                  href="#"
+                  to={"/admin-dashboard"}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
                   <Home className="h-5 w-5" />
                   Dashboard
                 </Link>
                 <Link
-                  href="#"
+                  to={"/admin-dashboard/manage-booking"}
                   className="flex items-center gap-4 px-2.5 text-foreground"
                 >
-                  <ShoppingCart className="h-5 w-5" />
-                  Orders
+                  <Package className="h-5 w-5" />
+                  Manage Booking
                 </Link>
                 <Link
                   href="#"
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
-                  <Package className="h-5 w-5" />
-                  Manage Booking
+                  <ShoppingCart className="h-5 w-5" />
+                  Order
                 </Link>
                 <Link
                   href="#"
@@ -353,7 +353,7 @@ const ManageBooking = () =>{
                 </CardHeader>
                 <CardContent>
                 <Table>
-                    <TableCaption>A list of your Property</TableCaption>
+                    <TableCaption>A list of your booking</TableCaption>
                     <TableHeader>
                         <TableRow>
                             <TableHead className="w-[100px]">Booking ID</TableHead>
@@ -409,8 +409,8 @@ const ManageBooking = () =>{
                     </TableBody>
                     <TableFooter>
                         <TableRow>
-                            <TableCell colSpan={6}>Total</TableCell>
-                            <TableCell className="text-right">$2,500.00</TableCell>
+                            <TableCell colSpan={5}>Total Bookings</TableCell>
+                            <TableCell className="text-right">5</TableCell>
                         </TableRow>
                     </TableFooter>
                 </Table>

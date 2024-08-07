@@ -91,7 +91,7 @@ const Admin = () =>{
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="#"
+                to={"/admin-dashboard"}
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
                 <Home className="h-5 w-5" />
@@ -103,14 +103,14 @@ const Admin = () =>{
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="#"
+                to={"/admin-dashboard/manage-booking"}
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
-                <ShoppingCart className="h-5 w-5" />
-                <span className="sr-only">Orders</span>
+                <Package className="h-5 w-5" />
+                <span className="sr-only">Manage Booking</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Orders</TooltipContent>
+            <TooltipContent side="right">Manage Booking</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -118,11 +118,11 @@ const Admin = () =>{
                 href="#"
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
-                <Package className="h-5 w-5" />
-                <span className="sr-only">Manage Booking</span>
+                <ShoppingCart className="h-5 w-5" />
+                <span className="sr-only">Orders</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Manage Booking</TooltipContent>
+            <TooltipContent side="right">Orders</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -183,25 +183,25 @@ const Admin = () =>{
                   <span className="sr-only">African Outback safaris</span>
                 </Link>
                 <Link
-                  href="#"
+                  to={"/admin-dashboard"}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
                   <Home className="h-5 w-5" />
                   Dashboard
                 </Link>
                 <Link
-                  href="#"
+                  to={"/admin-dashboard/manage-booking"}
                   className="flex items-center gap-4 px-2.5 text-foreground"
                 >
-                  <ShoppingCart className="h-5 w-5" />
-                  Orders
+                  <Package className="h-5 w-5" />
+                  Manage Booking
                 </Link>
                 <Link
                   href="#"
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
-                  <Package className="h-5 w-5" />
-                  Manage Booking
+                  <ShoppingCart className="h-5 w-5" />
+                  Order
                 </Link>
                 <Link
                   href="#"
@@ -287,7 +287,10 @@ const Admin = () =>{
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
-                  <Button>Manage Bookings</Button>
+                  <Link to={'/admin-dashboard/manage-booking'}>
+                    <Button>Manage Bookings</Button>
+                  </Link>
+                  
                 </CardFooter>
               </Card>
               <Card x-chunk="dashboard-05-chunk-1">
