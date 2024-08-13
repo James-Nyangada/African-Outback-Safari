@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/traveloLogo.png";
+import logo from "../assets/african-outback.png";
 import { Link, /* useLocation  */} from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 /* import useLocalStorage from "use-local-storage"; */
@@ -54,6 +54,8 @@ const Navbar = () => {
         <img
           onClick={() => setActiveTab("home")}
           className="logo"
+          width={250}
+          height={250}
           src={logo}
           alt=""
         />
@@ -151,7 +153,9 @@ const Container = styled.div`
   transition: 0.2s;
   box-shadow: 0 2px 70px -20px rgb(56, 142, 60); /* Add this line for border bottom shadow */
   .logo {
-    width: 270px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: -35px;
   }
   .nav-menu {
     display: flex;

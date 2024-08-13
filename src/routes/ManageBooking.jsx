@@ -13,9 +13,9 @@ import {
   Package2,
   PanelLeft,
   PlusCircle,
+  PlusIcon,
   Search,
   Settings,
-  ShoppingCart,
   Users2,
 } from "lucide-react"
 
@@ -74,6 +74,32 @@ import { useState, useEffect } from "react"
 
 const ManageBooking = () =>{
     const [allBooking, setAllBooking] = useState([])
+    const [allPackages, setAllPackages] = useState([])
+
+    const fetchPackages = async () => {
+        try {
+            const response = await axios.get('https://african-outback-server.vercel.app/api/getpackages');
+            const data = response.data.packages; // Adjusted to access the destination array
+            setAllPackages(data);
+            console.log('Packages rendered successfully');
+        } catch (error) {
+            console.log('Error Fetching Property', error);
+        }
+
+    }
+
+    useEffect(() => {
+        fetchPackages();
+    }, []);
+
+    const remove_package = async (id) => {
+        try {
+            await axios.delete(`https://african-outback-server.vercel.app/api/deletepackages/${id}`);
+            await fetchPackages()
+        } catch (error) {
+            console.log('Error deleting product', error)
+        }
+    }
 
     const fetchInfo = async () => {
         try {
@@ -138,14 +164,14 @@ const ManageBooking = () =>{
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="#"
+                to={"/admin-dashboard/add-packages"}
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
-                <ShoppingCart className="h-5 w-5" />
-                <span className="sr-only">Orders</span>
+                <PlusIcon className="h-5 w-5" />
+                <span className="sr-only">Add Packages</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Orders</TooltipContent>
+            <TooltipContent side="right">Add Packages</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -220,11 +246,11 @@ const ManageBooking = () =>{
                   Manage Booking
                 </Link>
                 <Link
-                  href="#"
+                  to={"/admin-dashboard/add-packages"}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
-                  <ShoppingCart className="h-5 w-5" />
-                  Order
+                  <PlusIcon className="h-5 w-5" />
+                  Add Packages
                 </Link>
                 <Link
                   href="#"
@@ -253,7 +279,7 @@ const ManageBooking = () =>{
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="#">Orders</Link>
+                  <Link href={"/admin-dashboard/add-packages"}>Add Packages</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -410,6 +436,85 @@ const ManageBooking = () =>{
                     <TableFooter>
                         <TableRow>
                             <TableCell colSpan={5}>Total Bookings</TableCell>
+                            <TableCell className="text-right">5</TableCell>
+                        </TableRow>
+                    </TableFooter>
+                </Table>
+                </CardContent>
+                <CardFooter>
+                  <div className="text-xs text-muted-foreground">
+                    Showing <strong>1-10</strong> of <strong>32</strong>{" "}
+                    products
+                  </div>
+                </CardFooter>
+              </Card>
+            </TabsContent>
+
+            <TabsContent value="all">
+              <Card x-chunk="dashboard-06-chunk-0">
+                <CardHeader>
+                  <CardTitle>Manage Packages</CardTitle>
+                  <CardDescription>
+                    Manage and track your Packages
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                <Table>
+                    <TableCaption>A list of your Packages</TableCaption>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead className="w-[100px]">Booking ID</TableHead>
+                            <TableHead>Name</TableHead>
+                            <TableHead>Location</TableHead>
+                            <TableHead>Price</TableHead>
+                            
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+
+                        {allPackages.map((tour, index) => (
+                            <TableRow key={index}>
+                                <TableCell>{tour._id}</TableCell>
+                                <TableCell>{tour.name}</TableCell>
+                                <TableCell >{tour.location}</TableCell>
+                                <TableCell >{tour.price}</TableCell>
+                                
+
+                                <TooltipProvider>
+                                    <Tooltip>
+                                        <TooltipTrigger asChild>
+                                            <button className="p-4 border border-black rounded-md">
+                                                <MdOutlineEdit />
+                                            </button>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p>Edit</p>
+                                        </TooltipContent>
+                                    </Tooltip>
+                                </TooltipProvider>
+
+
+                                <TooltipProvider>
+                                    <Tooltip>
+                                        <TooltipTrigger asChild>
+                                            <button onClick={() => remove_package(tour._id)} className="p-4 border border-black rounded-md ">
+                                                <MdOutlineDeleteOutline className="text-[15px]" />
+                                            </button>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p>Delete</p>
+                                        </TooltipContent>
+                                    </Tooltip>
+                                </TooltipProvider>
+
+
+                            </TableRow>
+                        ))}
+
+                    </TableBody>
+                    <TableFooter>
+                        <TableRow>
+                            <TableCell colSpan={3}>Total Bookings</TableCell>
                             <TableCell className="text-right">5</TableCell>
                         </TableRow>
                     </TableFooter>

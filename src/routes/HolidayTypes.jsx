@@ -46,7 +46,7 @@ const HolidayTypes = () => {
               of you.
             </p>
             <Link to={"/create-booking"}>
-              <button>Let's Customise</button>
+              <button>Plan Your trip</button>
             </Link>
             
           </div>
@@ -66,7 +66,7 @@ const HolidayTypes = () => {
               forever.
             </p>
             <Link to={"/create-booking"}>
-              <button>Let's Customise</button>
+              <button>Plan Your trip</button>
             </Link>
           </div>
         </div>
@@ -84,7 +84,7 @@ const HolidayTypes = () => {
               everyone finds joy and relaxation.
             </p>
              <Link to={"/create-booking"}>
-              <button>Let's Customise</button>
+              <button>Plan Your trip</button>
             </Link>
           </div>
         </div>
@@ -102,7 +102,7 @@ const HolidayTypes = () => {
               in local culture, and uncover hidden gems at your own pace.
             </p>
              <Link to={"/create-booking"}>
-              <button>Let's Customise</button>
+              <button>Plan Your trip</button>
             </Link>
           </div>
         </div>
@@ -121,7 +121,7 @@ const HolidayTypes = () => {
               desire.
             </p>
              <Link to={"/create-booking"}>
-              <button>Let's Customise</button>
+              <button>Plan Your trip</button>
             </Link>
           </div>
         </div>
@@ -136,7 +136,7 @@ const HolidayTypes = () => {
             Embark on a safari odyssey that blends discovery, luxury, and awe-inspiring landscapes. Our safari adventures transport you to the heart of the wild, awakening to new wonders each day. Let the savannah be your guide, where every trail unveils a gateway to extraordinary memories.
             </p>
              <Link to={"/create-booking"}>
-              <button>Let's Customise</button>
+              <button>Plan Your trip</button>
             </Link>
           </div>
         </div>

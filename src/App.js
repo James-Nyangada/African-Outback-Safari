@@ -38,6 +38,8 @@ import Admin from "./routes/Admin";
 import AdminLayout from "./AdminLayout";
 import { TooltipProvider } from "../src/components/ui/tooltip"; // Adjust the import path based on your project structure
 import ManageBooking from "./routes/ManageBooking";
+import AddPackages from "./routes/AddPackages";
+import TourDescription from "./routes/TourDescription";
 
 function App() {
   const location = useLocation();
@@ -54,7 +56,10 @@ function App() {
       {!hideNavbarAndFooter && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/destinations" element={<Destinations />} />
+        <Route path="/destinations" element={<Destinations />}/>
+        <Route path = '/packages' element= {<TourDescription/>}>
+          <Route path = ':packagesId' element = {<TourDescription/>}/>
+        </Route>
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/holiday-types" element={<HolidayTypes />} />
         <Route path="/blog" element={<Blog />} />
@@ -94,6 +99,7 @@ function App() {
         <Route path="/admin-dashboard" element={<AdminLayout />}>
           <Route index element={<Admin />} />
           <Route path="manage-booking" element={<ManageBooking />} />
+          <Route path = "add-packages" element ={<AddPackages/>} />
         </Route>
       </Routes>
       {!hideNavbarAndFooter && <Footer />}

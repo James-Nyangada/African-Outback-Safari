@@ -13,6 +13,7 @@ import {
   Package,
   Package2,
   PanelLeft,
+  PlusIcon,
   Search,
   Settings,
   ShoppingCart,
@@ -115,14 +116,14 @@ const Admin = () =>{
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
-                href="#"
+                to={"/admin-dashboard/add-packages"}
                 className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
               >
-                <ShoppingCart className="h-5 w-5" />
-                <span className="sr-only">Orders</span>
+                <PlusIcon className="h-5 w-5" />
+                <span className="sr-only">Add Packages</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Orders</TooltipContent>
+            <TooltipContent side="right">Add Packages</TooltipContent>
           </Tooltip>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -197,11 +198,11 @@ const Admin = () =>{
                   Manage Booking
                 </Link>
                 <Link
-                  href="#"
+                  to={"/admin-dashboard/add-packages"}
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
-                  <ShoppingCart className="h-5 w-5" />
-                  Order
+                  <PlusIcon className="h-5 w-5" />
+                  Add Packages
                 </Link>
                 <Link
                   href="#"
@@ -230,7 +231,7 @@ const Admin = () =>{
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                  <Link href="#">Orders</Link>
+                  <Link href={"/admin-dashboard/add-packages"}>Orders</Link>
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -718,4 +719,4 @@ const Admin = () =>{
     </div>
   )
 }
-export default Admin
+export default Admin;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/traveloLogo.png";
+import logo from "../assets/african-outback.png";
 import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
@@ -77,8 +77,8 @@ const Footer = () => {
           <div className="flex justify-between min620:flex-col min620:items-center min620:text-center min620:gap-[5rem] !text-left">
             {/* logo side */}
             <div className="flex flex-col w-1/3 gap-8 ml-8">
-              <img src={logo} alt="footer_logo" className="w-[18rem]" />
-              <p className="text-[18px] font-medium text-[#FFFFFF]">
+              <img src={logo} alt="footer_logo" className="" width={250} height={250} />
+              <p className="text-[18px] font-medium text-[#FFFFFF] mt-[-90px]">
                 Empowering Journeys, Enchanting Memories <br />Discover the Heartbeat of East Africa with Us!
               </p>
               {/* socials */}

@@ -1,0 +1,82 @@
+.description-page{
+    max-width: 1800px;
+    margin: 180px auto;
+    
+}
+.heading{
+    font-size: 50px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.image{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+
+}
+img{
+    border-radius: 20px;
+}
+.location h2{
+    font-size: 35px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+}
+.location p{
+    font-size: 20px;
+    color: #8c8c8c;
+    margin-bottom: 20px;
+}
+.price{
+    font-size: 35px;
+    font-weight: 600;
+    color: #374151;
+}
+.price span{
+    font-size: 20px;
+}
+.exclusions h3{
+    font-size: 27px;
+    font-weight: 600;
+    color: #374151;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+.exclusions ul li{
+    font-size: 20px;
+    color: #8c8c8c;
+}
+.exclusions ul{
+    list-style-type: disc;
+    margin-left: 50px;
+}
+.inclusions ul li{
+    font-size: 20px;
+    color: #8c8c8c;
+}
+.inclusions ul{
+    list-style-type: disc;
+    margin-left: 50px;
+}
+.inclusions h3{
+    font-size: 27px;
+    font-weight: 600;
+    color: #374151;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+.itinerary h3{
+    font-size: 27px;
+    font-weight: 600;
+    color: #374151;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+.itinerary p{
+    font-size: 20px;
+    color: #8c8c8c;
+    margin-bottom: 20px;
+}

@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, {useEffect } from "react";
 import styled from "styled-components";
 import bannerImg from "../assets/destinationsPageImages/bannerMapImg.webp";
 import data from "../components/destinationsData";
 import { AiTwotoneStar } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Package from "../components/Packages";
 
 const Destinations = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const Destinations = () => {
     zanzibarDestinations,
     eastAfricaDestinations,
   } = data;
+
   return (
     <Container>
       <div className="banner">
@@ -55,6 +57,11 @@ const Destinations = () => {
           src={bannerImg}
           alt=""
         />
+      </div>
+      <div>
+        <h2 className="title">Packages on Offer</h2>
+        <Package/>
+
       </div>
       <div className="continent">
         <h2 className="title">Kenya</h2>
