@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/african-outback.png";
+import logo from "../assets/african-outback.webp";
 import { AiFillInstagram, AiFillTwitterCircle } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { BsFacebook } from "react-icons/bs";
@@ -71,7 +71,7 @@ const Footer = () => {
 
   return (
     <Container>
-      <footer className="bg-[#388E3C]">
+      <footer className="bg-[#506D18]">
         <div className="container page-padding pb-[5rem] pt-[2rem]">
           {/* footer div all */}
           <div className="flex justify-between min620:flex-col min620:items-center min620:text-center min620:gap-[5rem] !text-left">

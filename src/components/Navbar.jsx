@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/african-outback.png";
+import logo from "../assets/african-outback.webp";
 import { Link, /* useLocation  */} from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 /* import useLocalStorage from "use-local-storage"; */
@@ -178,12 +178,14 @@ const Container = styled.div`
         font-family: "Poppins", sans-serif;
         font-size: 15px;
         border: none;
-        background: #FFEB3B;
-        color: black;
+        background: var(--primaryColorDark);
+        color: white;
         border-radius: 7px;
+        transition: all 0.3s ease-in;
         :hover {
-          background: var(--primaryColorDark);
+          background: #FFEB3B;
           transition: 0.3s;
+          color: black;
           cursor: pointer;
           :nth-child(2) {
             background-color: var(--secondaryBackgroundColor);
@@ -200,7 +202,7 @@ const Container = styled.div`
     transition: 0.3s;
     display: none;
     margin-top: 7px;
-    color: #2b2b2b;
+    color: var(--primaryColorDark);
     :hover {
       transform: scale(1.1);
     }

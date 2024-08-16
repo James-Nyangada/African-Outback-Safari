@@ -45,7 +45,7 @@ const ContactUs = () => {
           <p>+254722636346</p>
         </motion.div>
 
-        <a href="https:////wa.me/254791433046" target="_blank" rel="noreferrer">
+        <a href="https:////wa.me/254722636346" target="_blank" rel="noreferrer">
           <motion.div
             animate={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -500 }}
@@ -63,7 +63,7 @@ const ContactUs = () => {
           </motion.div>
         </a>
 
-        <a href="mailto:jamesedwin03@gmail.com" target='_blank' rel="noreferrer">
+        <a href="mailto:info@africanoutbacksafaris.com" target='_blank' rel="noreferrer">
           <motion.div
             animate={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -500 }}
@@ -77,7 +77,7 @@ const ContactUs = () => {
           >
             <AiFillPrinter className="icon" />
             <h3>EMAIL</h3>
-            <p>info@africanoutbacksafaris.com</p>
+            <p>info@african <br/>outbacksafaris.com</p>
           </motion.div>
         </a>
         

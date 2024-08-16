@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 import styled from "styled-components";
-import logo from "../assets/traveloLogo.png";
+import logo from "../assets/african-outback.webp";
 import { motion } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";

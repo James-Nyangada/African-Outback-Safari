@@ -43,12 +43,12 @@ const Container = styled.div`
       font-family: "Poppins", sans-serif;
       font-size: 15px;
       border: none;
-      background: #FFEB3B;
+      background: var(--primaryColorDark);
       color: black;
       border-radius: 7px;
       margin-top: 10px;
       :hover {
-        background: var(--primaryColorDark);
+        background: #FFEB3B;
         transition: 0.3s;
         cursor: pointer;
         :nth-child(2) {

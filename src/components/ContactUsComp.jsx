@@ -17,21 +17,21 @@ const ContactUsComp = () => {
             Nairobi Kenya
           </p>
         </div>
-        <div className="item">
+        <a href="https:////wa.me/254722636346" target="_blank" rel="noreferrer" className="item">
           <BsFillTelephoneFill className="icon" />
           <h3>PHONE NUMBER</h3>
-          <p>+254722636346</p>
-        </div>
+          <p>+254 722 636 346</p>
+        </a>
        {/*  <div className="item">
           <MdEmail className="icon" />
           <h3>FAX</h3>
           <p>1-123-456-7890</p>
         </div> */}
-        <a href="mail:to">
+        <a href="mailto:info@africanoutbacksafaris.com" target='_blank' rel="noreferrer">
           <div className="item " >
             <AiFillPrinter className="icon" />
             <h3>EMAIL</h3>
-            <p>info@<br/>africanoutbacksafaris.com</p>
+            <p>info@african<br/>outbacksafaris.com</p>
           </div>
         </a>
         
@@ -131,12 +131,14 @@ const Container = styled.div`
       font-family: "Poppins", sans-serif;
       font-size: 17px;
       border: none;
-      background: #FFEB3B;
-      color: black;
+      background: var(--primaryColorDark);
+      color: white;
       border-radius: 7px;
+      transition: all 0.3s ease-in;
       :hover {
-        background: var(--primaryColorDark);
+        background: #FFEB3B;
         transition: 0.3s;
+        color: black;
         cursor: pointer;
         :nth-child(2) {
           background-color: var(--secondaryBackgroundColor);
