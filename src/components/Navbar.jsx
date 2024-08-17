@@ -47,7 +47,7 @@ const Navbar = () => {
     <Container
       style={{
         backgroundColor:
-          pos === "top" ? "rgba(0, 0, 0, 0)" : "rgb(224, 247, 236)",
+          pos === "top" ? "rgba(0, 0, 0, 0)" : "rgb(250, 239, 224)",
       }}
     >
       <Link to={"/"} className="link-styles">
@@ -90,7 +90,7 @@ const Navbar = () => {
             }
             onClick={() => setActiveTab("holiday-types")}
           >
-            Packages
+            Tour Category
           </li>
         </Link>
         <Link to={"/about-us"} className="link-styles">

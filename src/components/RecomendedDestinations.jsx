@@ -38,11 +38,11 @@ const RecomendedDestinations = () => {
               be admired in Santorini.
             </p>
             <Link
-            to={"/create-booking"}
+            to={"/destinations"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
-            <button>Book Now!</button>
+            <button>See more</button>
             </Link>   
           </div>
         </div>
@@ -59,11 +59,11 @@ const RecomendedDestinations = () => {
              including the more than two million wildebeest, zebras and other antelopes that make up the famous Great Migration. 
             </p>
             <Link
-            to={"/create-booking"}
+            to={"/destinations"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
-            <button>Book Now!</button>
+            <button>See more</button>
             </Link>  
           </div>
         </div>
@@ -80,11 +80,11 @@ const RecomendedDestinations = () => {
             Stand in awe atop Uhuru Peak, the highest point in Africa, and savor the triumph of conquering this majestic mountain.           
              </p>
             <Link
-            to={"/create-booking"}
+            to={"/destinations"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
-            <button>Book Now!</button>
+            <button>See more</button>
             </Link>  
           </div>
         </div>
@@ -100,11 +100,11 @@ const RecomendedDestinations = () => {
             Relax in comfortable lodges and enjoy additional activities like bush walks and camel rides.
             </p>
             <Link
-            to={"/create-booking"}
+            to={"/destinations"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
-            <button>Book Now!</button>
+            <button>See more</button>
             </Link>  
           </div>
         </div>
@@ -121,11 +121,11 @@ const RecomendedDestinations = () => {
              Marvel at the dramatic landscapes of towering escarpments and dormant volcanoes, a testament to nature's raw power.            
              </p>
             <Link
-            to={"/create-booking"}
+            to={"/destinations"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
-            <button>Book Now!</button>
+            <button>See more</button>
             </Link>  
           </div>
         </div>
@@ -142,11 +142,11 @@ const RecomendedDestinations = () => {
             Capture breathtaking sunsets over the endless savannah, where every moment is a masterpiece.           
             </p>
             <Link
-            to={"/create-booking"}
+            to={"/destinations"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
-            <button>Book Now!</button>
+            <button>See more</button>
             </Link>  
           </div>
         </div>
@@ -163,11 +163,11 @@ const RecomendedDestinations = () => {
             Explore the diverse habitats, from lush forests to open grasslands, teeming with elephants, giraffes, and zebras.            
             </p>
             <Link
-            to={"/create-booking"}
+            to={"/destinations"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
-            <button>Book Now!</button>
+            <button>See more</button>
             </Link>  
           </div>
         </div>
@@ -184,11 +184,11 @@ const RecomendedDestinations = () => {
             Explore the diverse habitats, from swamps to acacia woodlands, teeming with zebras, giraffes, and predators like lions and cheetahs.            
             </p>
             <Link
-            to={"/create-booking"}
+            to={"/destinations"}
             className={activeTab === "book-now" ? "activeTab" : "nonActive" }
             onClick={() => setActiveTab("book-now")}
             >
-            <button>Book Now!</button>
+            <button>See more</button>
             </Link>  
           </div>
         </div>

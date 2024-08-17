@@ -80,3 +80,17 @@ img{
     color: #8c8c8c;
     margin-bottom: 20px;
 }
+.hotels h3{
+    font-size: 27px;
+    font-weight: 600;
+    color: #374151;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}
+.descriptiion h3{
+    font-size: 27px;
+    font-weight: 600;
+    color: #374151;
+    text-decoration: underline;
+    margin-bottom: 8px;
+}

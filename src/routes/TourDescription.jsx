@@ -62,7 +62,21 @@ const TourDescription = () =>{
                 </div>
                 <div className='itinerary'>
                     <h3>Itinerary</h3>
-                    <p>{tour.detaildescription}</p>
+                    <p>{tour.destinationdescription}</p>
+                </div>
+                <div className="hotels">
+                    <h3>Hotels</h3>
+                    {tour.hotels && tour.hotels.length > 0 ? (
+                        <ul>
+                        {tour.hotels.map((hotelName, index) => (
+                            <li key={index} className='text-[20px]'>
+                            <strong>{hotelName.hotel} </strong> - {hotelName.price} ksh /day
+                            </li>
+                        ))}
+                        </ul>
+                    ) : (
+                        <p>No hotels added yet.</p>
+                    )}
                 </div>
 
             </div>

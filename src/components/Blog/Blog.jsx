@@ -3,7 +3,7 @@ import styled from "styled-components";
 import BlogBox from "./BlogBox";
 
 const BlogContainer = styled.section`
-  background-color: #e0f7ec;
+  background-color: #faefe0;
 `;
 
 const BlogContent = styled.div`
@@ -11,6 +11,7 @@ const BlogContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
 
   .title {
     text-align: center;

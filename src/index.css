@@ -11,14 +11,14 @@
   margin: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: #506d18 #e0f7ec;
+  scrollbar-color: #506d18 #faefe0;
   scroll-behavior: smooth;
 }
 body {
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #e0f7ec;
+  background: #faefe0;
   overflow-x: hidden;
   color: var(--fontPrimaryColor);
 }
@@ -48,22 +48,22 @@ code {
   --backgroundGradient: radial-gradient(
     circle at 10% 45%,
     #506d18 2%,
-    #e0f7ec 25%
+    #faefe0 25%
   );
   --backgroundGradient2: radial-gradient(
     circle at 90% 45%,
     #506d18 2%,
-    #e0f7ec 25%
+    #faefe0 25%
   );
   --backgroundGradient3: radial-gradient(
     circle at 2% 40%,
     #506d18 2%,
-    #e0f7ec 13%
+    #faefe0 13%
   );
   --backgroundGradient4: radial-gradient(
     circle at 92% 25%,
     #506d18 2%,
-    #e0f7ec 10%
+    #faefe0 10%
   );
   --gradientBackground: -webkit-linear-gradient(
     109.6deg,

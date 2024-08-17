@@ -75,14 +75,29 @@ import imageCompression from 'browser-image-compression'
 
 const AddPackages = () =>{
     const [images, setImages] = useState(Array(2).fill(null)); //array to hold up to 2 images
+      // State to hold the table rows
+    const [rows, setRows] = useState([
+      { hotel: "", price: "" }, // Initial row
+    ]);
 
+      // Function to handle adding a new row
+    const handleAddRow = () => {
+      setRows([...rows, { hotel: "", price: "" }]); // Adds a new empty row
+    };
+
+      // Function to handle input changes
+    const handleInputChange = (index, field, value) => {
+      const newRows = [...rows];
+      newRows[index][field] = value;
+      setRows(newRows);
+    };
     const [packageDetails, setPackageDetails] = useState({
         name: "",
         location: "",
         inclusions: "",
         exclusions: "",
         smalldescription: "",
-        specialnotes: "",
+        speacialnotes: "",
         offerPrice: "",
         price: "",
         destinationdescription: "",
@@ -129,7 +144,7 @@ const AddPackages = () =>{
             
             if(uploadResponse.data.success){
                 const imageUrls = uploadResponse.data.image_urls;
-                const packages = { ...packageDetails, imageUrls}
+                const packages = { ...packageDetails, imageUrls, hotels: rows };
 
                 console.log(packages);
                 const addPackageResponse = await axios.post('https://african-outback-server.vercel.app/api/addpackages', packages);
@@ -357,9 +372,12 @@ const AddPackages = () =>{
                 new Package
               </Badge>
               <div className="hidden items-center gap-2 md:ml-auto md:flex">
+              <Link to={"/admin-dashboard"}>
                 <Button variant="outline" size="sm">
                   Discard
                 </Button>
+              </Link>
+                
                 <Button size="sm" onClick={Add_Package}>Save Package</Button>
               </div>
             </div>
@@ -488,9 +506,7 @@ const AddPackages = () =>{
                 <Card x-chunk="dashboard-07-chunk-1">
                   <CardHeader>
                     <CardTitle>Hotels and Lounges</CardTitle>
-                    <CardDescription>
-                        Add Relevant accomodation for your package
-                    </CardDescription>
+                    <CardDescription>Add relevant accommodation for your package</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Table>
@@ -501,111 +517,60 @@ const AddPackages = () =>{
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        <TableRow>
+                        {rows.map((row, index) => (
+                          <TableRow key={index}>
                             <TableCell className="font-semibold">
-                                <Label htmlFor="stock-1" className="sr-only">
-                                    Hotel/Resort
-                                    </Label>
-                                    <Input
-                                    id="stock-1"
-                                    type="name"
-                                    placeholder="Sun n Suns"
-                                    />
+                              <Label htmlFor={`hotel-${index}`} className="sr-only">Hotel/Resort</Label>
+                              <Input
+                                id={`hotel-${index}`}
+                                type="text"
+                                placeholder="Hotel/Resort Namr"
+                                value={row.hotel}
+                                onChange={(e) => handleInputChange(index, "hotel", e.target.value)}
+                              />
                             </TableCell>
                             <TableCell>
-                                <Label htmlFor="stock-1" className="sr-only">
-                                Price
-                                </Label>
-                                <Input
-                                id="stock-1"
-                                type="string"
+                              <Label htmlFor={`price-${index}`} className="sr-only">Price</Label>
+                              <Input
+                                id={`price-${index}`}
+                                type="text"
                                 placeholder="ksh: 20,000"
-                                />
+                                value={row.price}
+                                onChange={(e) => handleInputChange(index, "price", e.target.value)}
+                              />
                             </TableCell>
-    
-                        </TableRow>
-                        
-                        <TableRow>
-                            <TableCell className="font-semibold">
-                                <Label htmlFor="stock-1" className="sr-only">
-                                    Hotel/Resort
-                                    </Label>
-                                    <Input
-                                    id="stock-1"
-                                    type="name"
-                                    placeholder="Sun n Suns"
-                                    />
-                            </TableCell>
-                            <TableCell>
-                                <Label htmlFor="stock-1" className="sr-only">
-                                Price
-                                </Label>
-                                <Input
-                                id="stock-1"
-                                type="string"
-                                placeholder="ksh: 20,000"
-                                />
-                            </TableCell>
-    
-                        </TableRow>
-                        
+                          </TableRow>
+                        ))}
                       </TableBody>
                     </Table>
                   </CardContent>
                   <CardFooter className="justify-center border-t p-4">
-                    <Button size="sm" variant="ghost" className="gap-1">
+                    <Button size="sm" variant="ghost" className="gap-1" onClick={handleAddRow}>
                       <PlusCircle className="h-3.5 w-3.5" />
-                      Add Variant
+                      Add Hotel row 
                     </Button>
                   </CardFooter>
                 </Card>
+
                 <Card x-chunk="dashboard-07-chunk-2">
                   <CardHeader>
-                    <CardTitle>Package Category</CardTitle>
+                    <CardTitle>Special Notes</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid gap-6 sm:grid-cols-3">
+                    
                       <div className="grid gap-3">
-                        <Label htmlFor="category">Category</Label>
-                        <Select>
-                          <SelectTrigger
-                            id="category"
-                            aria-label="Select category"
-                          >
-                            <SelectValue placeholder="Select category" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="clothing">Clothing</SelectItem>
-                            <SelectItem value="electronics">
-                              Electronics
-                            </SelectItem>
-                            <SelectItem value="accessories">
-                              Accessories
-                            </SelectItem>
-                          </SelectContent>
-                        </Select>
+                        <Label htmlFor="destinationdescription">Special notes for the package</Label>
+                        <Textarea
+                            id="speacialnotes"
+                            value= {packageDetails.speacialnotes}
+                            onChange= {changeHandler}
+                            name= "speacialnotes"
+                            placeholder="Enter a detailed itinerary of your package"
+                            className="min-h-32"
+                        />
                       </div>
-                      <div className="grid gap-3">
-                        <Label htmlFor="subcategory">
-                          Subcategory (optional)
-                        </Label>
-                        <Select>
-                          <SelectTrigger
-                            id="subcategory"
-                            aria-label="Select subcategory"
-                          >
-                            <SelectValue placeholder="Select subcategory" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="t-shirts">T-Shirts</SelectItem>
-                            <SelectItem value="hoodies">Hoodies</SelectItem>
-                            <SelectItem value="sweatshirts">
-                              Sweatshirts
-                            </SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
+                      
+                   
                   </CardContent>
                 </Card>
               </div>
@@ -623,9 +588,9 @@ const AddPackages = () =>{
                             <SelectValue placeholder="Select status" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="draft">Draft</SelectItem>
-                            <SelectItem value="published">Active</SelectItem>
-                            <SelectItem value="archived">Archived</SelectItem>
+                            <SelectItem value="draft">On Offer</SelectItem>
+                            <SelectItem value="published">Normal</SelectItem>
+                            
                           </SelectContent>
                         </Select>
                       </div>
@@ -643,38 +608,11 @@ const AddPackages = () =>{
                   </CardHeader>
                   <CardContent>
                     <div className="grid gap-2">
-                      <image
-                        alt="Product image"
-                        className="aspect-square w-full rounded-md object-cover"
-                        height="300"
-                        src="/placeholder.svg"
-                        width="300"
-                      />
-                      <div className="grid grid-cols-3 gap-2">
-                        <button>
-                          <image
-                            alt="Product image"
-                            className="aspect-square w-full rounded-md object-cover"
-                            height="84"
-                            src="/placeholder.svg"
-                            width="84"
-                          />
-                        </button>
-                        <button>
-                          <image
-                            alt="Product image"
-                            className="aspect-square w-full rounded-md object-cover"
-                            height="84"
-                            src="/placeholder.svg"
-                            width="84"
-                          />
-                        </button>
-                        <button className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
-                          <Upload className="h-4 w-4 text-muted-foreground" />
+                        <button className="cusor-pointer">
                           <Input onChange= {imagesHandler} type= "file" name= 'images' id='fileinput' hidden multiple/>
                           <span className="sr-only">Upload</span>
                         </button>
-                      </div>
+                 
                     </div>
                   </CardContent>
                 </Card>
@@ -695,10 +633,13 @@ const AddPackages = () =>{
               </div>
             </div>
             <div className="flex items-center justify-center gap-2 md:hidden">
+            <Link to={"/admin-dashboard"}>
               <Button variant="outline" size="sm">
                 Discard
               </Button>
-              <Button size="sm">Save Product</Button>
+            </Link>
+             
+              <Button size="sm">Save Package</Button>
             </div>
           </div>
         </main>

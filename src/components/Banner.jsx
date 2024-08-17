@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import bannerImg from "../assets/homePageImages/bannerImg2.webp";
+import bannerImg from "../assets/african-outback.webp";
 /* import { BsSearch } from "react-icons/bs"; */
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ const Banner = () => {
         className="leftSide"
       >
         <h1>
-          Life is short, and the <br /> world is wide. <br /> Let's safari!
+          African Outback <br />safaris
         </h1>
         <p>Travel far, travel wide, and let your soul dance with giraffes. <br />No apologies just wild fun ahead</p>
         <Link
@@ -89,7 +89,8 @@ const Container = styled.div`
     }
   }
   .bannerImg {
-    width: 45%;
+    width: 500px;
+    height: 500px;
     max-width: 720px;
     border-radius: 40px;
   }
