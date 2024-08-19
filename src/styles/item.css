@@ -37,6 +37,12 @@
     font-size: 18px;
     font-weight: 500;
 }
+.card{
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 30px;
+    background: #fce8cc;
+}
 .add-to-cart{}
 @media(max-width:1280px){
     .item{

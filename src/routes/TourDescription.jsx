@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import '../styles/tourdesc.css'
 import { ToursContext } from '../context/ToursContext'
 import { useParams } from 'react-router-dom';
+import Reviews from '../components/Reviews'
 
 const TourDescription = () =>{
     const {tours} = useContext(ToursContext);
@@ -80,6 +81,7 @@ const TourDescription = () =>{
                 </div>
 
             </div>
+            <Reviews/>
         </div>
     )
 }

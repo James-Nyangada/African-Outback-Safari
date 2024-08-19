@@ -1,17 +1,35 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import personPic1 from "../assets/homePageImages/person.png";
+import personPic2 from "../assets/homePageImages/person.png";
+import personPic3 from "../assets/homePageImages/person.png";
 import { RiDoubleQuotesR } from "react-icons/ri";
-import personPic1 from "../assets/homePageImages/person1Pic.avif";
-import personPic2 from "../assets/homePageImages/person2Pic.jpg";
-import personPic3 from "../assets/homePageImages/person3Pic.webp";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
+import axios from "axios"; // For making HTTP requests
 
 const Testimonials = () => {
   const { ref, inView } = useInView();
   const animation = useAnimation();
   const [hasAnimated, setHasAnimated] = useState(false);
+  const [reviews, setReviews] = useState([]); // State to store the reviews
+
+  useEffect(() => {
+    // Fetch the latest three reviews when the component mounts
+    const fetchReviews = async () => {
+      try {
+        const response = await axios.get("https://african-outback-server.vercel.app/api/getreviews");
+        const allReviews = response.data.reviews;
+        const latestReviews = allReviews.slice(-3).reverse(); // Get the last 3 reviews
+        setReviews(latestReviews);
+      } catch (error) {
+        console.error("Error fetching reviews:", error);
+      }
+    };
+
+    fetchReviews();
+  }, []);
 
   useEffect(() => {
     if (inView && !hasAnimated) {
@@ -26,6 +44,7 @@ const Testimonials = () => {
       animation.start({ opacity: 0, y: 100 });
     }
   }, [inView, hasAnimated, animation]);
+
   return (
     <Container>
       <div className="topSection">
@@ -38,64 +57,28 @@ const Testimonials = () => {
         </p>
       </div>
       <div className="bottomSection" ref={ref}>
-        <motion.div animate={animation} className="item">
-          <RiDoubleQuotesR className="icon" />
-          <p>
-            I've traveled the globe, but my recent trip with African Outback Safari was
-            next-level perfection. They curated a seamless itinerary, blending
-            luxury and exploration effortlessly. Each accommodation felt like a
-            home away from home, and the exclusive experiences they arranged
-            were the cherry on top. African Outback Safari is now my go-to for all things
-            travel!"
-          </p>
-          <div>
-            <img src={personPic1} alt="" />
-            <span>
-              <h2>Steve Jackson</h2>
-              <p>Loyal Client</p>
-            </span>
-          </div>
-        </motion.div>
-
-        <motion.div animate={animation} className="item">
-          <RiDoubleQuotesR className="icon" />
-          <p>
-            Immersing myself in new cultures is my passion, and African Outback Safaris turned
-            my wanderlust into reality. Their in-depth knowledge of local
-            traditions and hidden gems led me to authentic experiences I'll
-            cherish forever. Thanks to them, I walked the path less traveled and
-            discovered the heart and soul of each destination.
-          </p>
-          <div>
-            <img src={personPic3} alt="" />
-            <span>
-              <h2>Jennifer Harlow</h2>
-              <p>Client</p>
-            </span>
-          </div>
-        </motion.div>
-        <motion.div animate={animation} className="item">
-          <RiDoubleQuotesR className="icon" />
-          <p>
-            Travelling with kids can be challenging, but African Outback Safaris made it a
-            breeze! They crafted a family-friendly trip that kept everyone
-            entertained and happy. The thoughtful activities, comfortable
-            accommodations, and kid-approved dining options exceeded our
-            expectations. Our kids are already asking when we can book another
-            adventure with African Outback Safari.
-          </p>
-          <div>
-            <img src={personPic2} alt="" />
-            <span>
-              <h2>Mark Ross</h2>
-              <p>Client</p>
-            </span>
-          </div>
-        </motion.div>
+        {reviews.map((review, index) => (
+          <motion.div key={index} animate={animation} className="item">
+            <RiDoubleQuotesR className="icon" />
+            <p>{review.message}</p>
+            <div>
+              <img
+                src={index === 0 ? personPic1 : index === 1 ? personPic2 : personPic3}
+                alt={`Person ${index + 1}`}
+              />
+              <span>
+                <h2>{review.name}</h2>
+                <a href={`mailto: ${review.emailaddress}`}>{review.emailaddress}</a>
+                <p>Client</p>
+              </span>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </Container>
   );
 };
+
 const Container = styled.div`
   padding: 7em 7%;
   background: var(--backgroundGradient2);

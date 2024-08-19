@@ -9,6 +9,7 @@ import RecomendedDestinations from "../components/RecomendedDestinations";
 import Testimonials from "../components/Testimonials";
 import ContactUsComp from "../components/ContactUsComp";
 import Offers from "../components/Offers";
+import Reviews from "../components/Reviews";
 
 const Home = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const Home = () => {
       <OurServices />
       <RecomendedDestinations />
       <Offers />
+      <Reviews/>
       <Testimonials />
       <Blog/>
       <ContactUsComp />
