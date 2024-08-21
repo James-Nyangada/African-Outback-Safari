@@ -15,7 +15,7 @@ const Banner = () => {
         className="leftSide"
       >
         <h1>
-          African Outback <br />safaris
+          Plan Your Safari <br />With Us
         </h1>
         <p>Travel far, travel wide, and let your soul dance with giraffes. <br />No apologies just wild fun ahead</p>
         <Link

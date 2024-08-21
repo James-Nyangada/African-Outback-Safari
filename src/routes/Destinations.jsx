@@ -59,7 +59,7 @@ const Destinations = () => {
         />
       </div>
       <div>
-        <h2 className="title">Packages on Offer</h2>
+        <h2 className="title">Packages on offer</h2>
         <Package/>
 
       </div>
