@@ -1,8 +1,19 @@
-import { useContext, useEffect, useState } from 'react'
-import '../styles/tourdesc.css'
+import React, { useContext, useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import { Calendar, MapPin, Star, User, DollarSign, Coffee, Utensils, Car, Hotel } from 'lucide-react'
+import { Button } from "../components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
+import { Input } from "../components/ui/input"
+import { Textarea } from "../components/ui/textarea"
+import { Label } from "../components/ui/label"
 import { ToursContext } from '../context/ToursContext'
 import { useParams } from 'react-router-dom';
-import Reviews from '../components/Reviews'
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } }
+}
 
 const TourDescription = () =>{
     const {tours} = useContext(ToursContext);
@@ -17,72 +28,230 @@ const TourDescription = () =>{
         setTour(selectedTour);
         console.log('Selected Tour:', selectedTour);
     }, [tours, packagesId]);
+  const [reviewName, setReviewName] = useState('')
+  const [reviewContent, setReviewContent] = useState('')
+  const [reviews, setReviews] = useState([
+    { name: 'John Doe', content: 'Amazing experience! The wildlife was breathtaking.' },
+    { name: 'Jane Smith', content: 'Unforgettable journey. Highly recommend!' }
+  ])
 
-    if(!tour){
-        return <h1>Loading...</h1>
+  const handleReviewSubmit = (e) => {
+    e.preventDefault()
+    if (reviewName && reviewContent) {
+      setReviews([...reviews, { name: reviewName, content: reviewContent }])
+      setReviewName('')
+      setReviewContent('')
     }
+  }
+  if(!tour){
+    return <h1>Loading...</h1>
+}
 
-
-    return (
-        <div className="description-page">
-            <div>
-                <div className='heading'>
-                    <h1>{tour.name}</h1>
-
-                </div>
-                <div className='image'>
-                    <img src={tour.imageUrls[0]} alt='mount kenya' width={400} height={400}/>
-                    <img src={tour.imageUrls[1]} alt='mount kenya' width={400} height={400}/>
-                    <img src={tour.imageUrls[1]} alt='mount kenya' width={400} height={400}/>
-                    <img src={tour.imageUrls[1]} alt='mount kenya' width={400} height={400}/>
-                </div>
-                <div className='location'>
-                    <h2>Location: {tour.location}</h2>
-                    <p>{tour.smalldescription}
-                    </p>
-                </div>
-                <div className='price'>
-                    <h3>Price: ${tour.price} <span>/Per Day</span></h3>
-
-                </div>
-                <div className='exclusions'>
-                    <h3>Exclusions</h3>
-                    <ul>
-                       {tour.exclusions}
-                    </ul>
-                </div>
-                <div className='inclusions'>
-                    <h3>Inclusions</h3>
-                    <ul>
-                        {tour.inclusions}
-                    </ul>
-                </div>
-                <div className='descriptiion'>
-                    <h3>Special Notes</h3>
-                    <p>{tour.speacialnotes}</p>
-                </div>
-                <div className='itinerary'>
-                    <h3>Itinerary</h3>
-                    <p>{tour.destinationdescription}</p>
-                </div>
-                <div className="hotels">
-                    <h3>Hotels</h3>
-                    {tour.hotels && tour.hotels.length > 0 ? (
-                        <ul>
-                        {tour.hotels.map((hotelName, index) => (
-                            <li key={index} className='text-[20px]'>
-                            <strong>{hotelName.hotel} </strong> - {hotelName.price} ksh /day
-                            </li>
-                        ))}
-                        </ul>
-                    ) : (
-                        <p>No hotels added yet.</p>
-                    )}
-                </div>
-
-            </div>
-            <Reviews/>
+  return (
+    <div className="max-w-4xl mx-auto p-6 mt-[120px]">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="relative h-96 rounded-xl overflow-hidden mb-8"
+      >
+        <img
+          src={tour.imageUrls[0]}
+          alt="African Safari"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+          <div className="p-6 text-white">
+            <h1 className="text-4xl font-bold mb-2">{tour.location}</h1>
+            <p className="text-xl"></p>
+          </div>
         </div>
-    )
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="mb-8"
+      >
+        <p className="text-lg mb-4">
+            {tour.smalldescription}
+        </p>
+        <div className="flex items-center justify-between bg-primary/10 p-4 rounded-lg">
+          <div className="flex items-center gap-2">
+            <Calendar className="text-primary" />
+            <span>{tour.name}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MapPin className="text-primary" />
+            <span>{tour.location}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Star className="text-primary" />
+            <span>4.9 (120 reviews)</span>
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="mb-8"
+      >
+        <Card>
+          <CardHeader>
+            <CardTitle>Package Price</CardTitle>
+            <CardDescription>All-inclusive safari experience</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="text-4xl font-bold text-primary">${tour.price} <span className="text-base font-normal text-muted-foreground">per person</span></div>
+          </CardContent>
+          <CardFooter>
+            <Button size="lg" className="w-full">
+              Book Now
+            </Button>
+          </CardFooter>
+        </Card>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="mb-8"
+      >
+        <h2 className="text-2xl font-bold mb-4">Itinerary</h2>
+        <div className="space-y-4">
+          {[1, 2, 3, 4, 5, 6, 7].map((day) => (
+            <Card key={day}>
+              <CardHeader>
+                <CardTitle>Day {day}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Experience the wonders of the Serengeti on day {day} of your adventure. Witness incredible wildlife, enjoy breathtaking landscapes, and immerse yourself in the beauty of Africa.</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="mb-8"
+      >
+        <h2 className="text-2xl font-bold mb-4">Inclusions & Exclusions</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Inclusions</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">{tour.inclusions}</li>
+               
+              </ul>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Exclusions</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">{tour.exclusions}</li>
+                
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="mb-8"
+      >
+        <h2 className="text-2xl font-bold mb-4">Accommodation</h2>
+        <div className="space-y-4">
+        {tour.hotels && tour.hotels.length > 0 ? (
+            <Card>
+              <CardHeader>
+                <CardTitle>Hotels/Accommodation</CardTitle>
+              </CardHeader>
+              {tour.hotels.map((hotelName, index) => (
+              <CardContent className="flex justify-between items-center">
+                <div className="flex items-center gap-2" key={index}>
+                  <Hotel className="text-primary" />
+                  <span>{hotelName.hotel}</span>
+                </div>
+                <div className="text-xl font-bold"  key={index}>
+                {hotelName.price} <span className="text-sm font-normal text-muted-foreground">ksh /day</span>
+                </div>
+              </CardContent>
+            ))}
+            </Card>
+            ) : (
+                <p>No hotels added yet.</p>
+            )}
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        className="mb-8"
+      >
+        <h2 className="text-2xl font-bold mb-4">Reviews</h2>
+        <Tabs defaultValue="read" className="w-full">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="read">Read Reviews</TabsTrigger>
+            <TabsTrigger value="write">Write a Review</TabsTrigger>
+          </TabsList>
+          <TabsContent value="read">
+            <div className="space-y-4 mt-4">
+              {reviews.map((review, index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <CardTitle>{review.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p>{review.content}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="write">
+            <form onSubmit={handleReviewSubmit} className="space-y-4 mt-4">
+              <div className="space-y-2">
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  value={reviewName}
+                  onChange={(e) => setReviewName(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="review">Your Review</Label>
+                <Textarea
+                  id="review"
+                  value={reviewContent}
+                  onChange={(e) => setReviewContent(e.target.value)}
+                  required
+                />
+              </div>
+              <Button type="submit">Submit Review</Button>
+            </form>
+          </TabsContent>
+        </Tabs>
+      </motion.div>
+    </div>
+  )
 }
 export default TourDescription
