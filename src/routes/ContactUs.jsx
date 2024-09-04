@@ -5,8 +5,27 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
 import { AiFillPrinter } from "react-icons/ai";
 import { motion } from "framer-motion";
+import {useRef} from 'react'
+import { useState } from "react";
+import emailjs from 'emailjs-com'
 
 const ContactUs = () => {
+  const form = useRef();
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_vg9iva2', 'template_zua21zm', form.current, 'WKQI1AZALcoUj2hiX')
+
+    form.current.reset();
+    setIsFormSubmitted(true);
+
+    // Reset success message after a delay (you can adjust the delay as needed)
+    setTimeout(() => {
+      setIsFormSubmitted(false);
+    }, 6000);
+  };
   return (
     <Container>
       <div className="items">
@@ -84,6 +103,8 @@ const ContactUs = () => {
         
       </div>
       <motion.form
+        ref={form}
+        onSubmit={sendEmail}
         animate={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 500 }}
         transition={{
@@ -94,14 +115,15 @@ const ContactUs = () => {
         }}
       >
         <h2>CONTACT US</h2>
-        <input type="text" placeholder="Ener Your Name..." />
-        <input type="email" placeholder="Ener Your Email..." />
+        <input type="text" name="name" placeholder="Enter Your Full Name..." />
+        <input type="email" name="email" placeholder="Ener Your Email..." />
         <textarea
           cols="30"
           rows="10"
+          name="message"
           placeholder="Enter Your Message or concern..."
         ></textarea>
-        <button>SUBMIT</button>
+        <button type="submit">SUBMIT</button>
       </motion.form>
     </Container>
   );

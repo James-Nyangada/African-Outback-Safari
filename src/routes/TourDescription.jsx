@@ -127,7 +127,7 @@ const TourDescription = () =>{
           
             <Card >
               <CardHeader>
-                <CardTitle>Day</CardTitle>
+                <CardTitle>Detail day Description</CardTitle>
               </CardHeader>
               <CardContent>
               <div dangerouslySetInnerHTML={{ __html: tour.destinationdescription }} />
