@@ -18,7 +18,7 @@ const destinationsData = {
     },
     {
       city: "Mombasa,",
-      country: "Coast",
+      country: "North Coast",
       img: require("../assets/homePageImages/thailand.webp"),
       visits: 278,
       reviews: 4.9,
@@ -26,15 +26,15 @@ const destinationsData = {
     },
     {
       city: "Diani,",
-      country: "Coast",
+      country: "South Coast",
       img: require("../assets/homePageImages/thailand.webp"),
       visits: 238,
       reviews: 4.6,
       link: "/destinations",
     },
     {
-      city: "Massai Mara,",
-      country: "South Kenya",
+      city: "Masaai Mara,",
+      country: "Narok",
       img: require("../assets/homePageImages/hawaii.webp"),
       visits: 238,
       reviews: 4.6,
@@ -42,7 +42,7 @@ const destinationsData = {
     },
     {
       city: "Amboseli,",
-      country: "South Kenya",
+      country: "Kajiado",
       img: require("../assets/homePageImages/bali.webp"),
       visits: 188,
       reviews: 4.8,
@@ -57,7 +57,7 @@ const destinationsData = {
       link: "/destinations"
     },
     {
-      city: "Naivasha,",
+      city: "Lake Naivasha,",
       country: "Rift Valley",
       img: "https://www.shadowsofafrica.com/media/wysiwyg/Itineraries/Kenya_Lake_Naivasha/shutterstock_137003909.jpg",
       visits: 118,

@@ -29,7 +29,7 @@ const RecomendedDestinations = () => {
           <img src={santorini} alt="" />
           <div>
             <h2>Mombasa</h2>
-            <h3>South coast</h3>
+            <h3>North coast</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
               The rare natural beauty of South Coat in Mombasa, the breathtaking caldera,
@@ -49,8 +49,8 @@ const RecomendedDestinations = () => {
         <div className="card">
           <img src={dubai} alt="" className="object-fit h-[400px]"/>
           <div>
-            <h2>MassaiMara</h2>
-            <h3>South Kenya</h3>
+            <h2>Masaai Mara</h2>
+            <h3>Narok</h3>
             <img src={fiveStarIcon} alt=""/>
             <p>
             Discover the iconic Masai Mara Situated in the southwest of Kenya, covering an area of 1,510 square km.
@@ -91,7 +91,8 @@ const RecomendedDestinations = () => {
         <div className="card">
           <img src={hawaii} alt="" className="h-[400px]" />
           <div>
-            <h2>Samburu</h2>
+            <h2>Samburu National Park</h2>
+            <h3>Samburu</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
             Experience the untamed beauty of Samburu on our packaged safaris. 
@@ -153,8 +154,8 @@ const RecomendedDestinations = () => {
         <div className="card">
           <img src={ksamil} alt="" />
           <div>
-            <h2>Tanzania</h2>
-            <h3>Lake Manyara National Park</h3>
+            <h2>Lake Manyara National Park</h2>
+            <h3>Tanzania</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
             Discover Lake Manyara, a scenic gem nestled in the Great Rift Valley. 
@@ -174,8 +175,8 @@ const RecomendedDestinations = () => {
         <div className="card">
           <img src={bali} alt="" />
           <div>
-            <h2>Amboseli</h2>
-            <h3>Amboseli National Park</h3>
+            <h2>Amboseli National Park</h2>
+            <h3>Kajiado</h3>
             <img src={fiveStarIcon} alt="" />
             <p>
             Discover Amboseli, where majestic elephants roam freely against the backdrop of snow-capped Kilimanjaro. 

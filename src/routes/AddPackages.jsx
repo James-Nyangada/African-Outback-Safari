@@ -401,7 +401,7 @@ const AddPackages = () =>{
                           name= "name"
                           type="text"
                           className="w-full"
-                          placeholder="3 day Massai mara trip"
+                          placeholder="3 day Masaai mara trip"
                         />
                       </div>
                       <div className="grid gap-3">
