@@ -8,7 +8,7 @@ import { Input } from "../components/ui/input"
 import { Textarea } from "../components/ui/textarea"
 import { Label } from "../components/ui/label"
 import { ToursContext } from '../context/ToursContext'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -105,13 +105,14 @@ const TourDescription = () =>{
             <CardDescription>All-inclusive safari experience</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="text-4xl font-bold text-primary">${tour.price} <span className="text-base font-normal text-muted-foreground">per person</span></div>
+          <Link to={'/contact-us'}>
+                <Button size="lg" className="w-full">
+                Get a Quote
+                </Button>
+          </Link>
+        
           </CardContent>
-          <CardFooter>
-            <Button size="lg" className="w-full">
-              Book Now
-            </Button>
-          </CardFooter>
+   
         </Card>
       </motion.div>
 
@@ -123,16 +124,17 @@ const TourDescription = () =>{
       >
         <h2 className="text-2xl font-bold mb-4">Itinerary</h2>
         <div className="space-y-4">
-          {[1, 2, 3, 4, 5, 6, 7].map((day) => (
-            <Card key={day}>
+          
+            <Card >
               <CardHeader>
-                <CardTitle>Day {day}</CardTitle>
+                <CardTitle>Day</CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Experience the wonders of the Serengeti on day {day} of your adventure. Witness incredible wildlife, enjoy breathtaking landscapes, and immerse yourself in the beauty of Africa.</p>
+              <div dangerouslySetInnerHTML={{ __html: tour.destinationdescription }} />
+
               </CardContent>
             </Card>
-          ))}
+          
         </div>
       </motion.div>
 
