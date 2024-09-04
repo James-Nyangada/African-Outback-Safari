@@ -191,7 +191,7 @@ const TourDescription = () =>{
                   <span>{hotelName.hotel}</span>
                 </div>
                 <div className="text-xl font-bold"  key={index}>
-                {hotelName.price} <span className="text-sm font-normal text-muted-foreground">ksh /day</span>
+                {hotelName.price} <span className="text-sm font-normal text-muted-foreground"></span>
                 </div>
               </CardContent>
             ))}
