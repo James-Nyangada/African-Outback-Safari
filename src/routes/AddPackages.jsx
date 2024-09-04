@@ -1,5 +1,7 @@
 import { Link, /* useLocation  */} from "react-router-dom"
 import axios from 'axios'
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; // import styles for the editor
 
 import {
   ChevronLeft,
@@ -126,6 +128,11 @@ const AddPackages = () =>{
 
     const changeHandler = (e) =>{
         setPackageDetails({...packageDetails, [e.target.name]: e.target.value});
+    }
+
+      // Rich text editor handler
+      const handleQuillChange = (value) => {
+        setPackageDetails({...packageDetails, destinationdescription: value});
     }
 
     const Add_Package = async () => {
@@ -488,13 +495,11 @@ const AddPackages = () =>{
                       </div>
                       <div className="grid gap-3">
                         <Label htmlFor="destinationdescription">Detailed Day wise Itinerary</Label>
-                        <Textarea
-                            id="destinationdescription"
-                            value= {packageDetails.destinationdescription}
-                            onChange= {changeHandler}
-                            name= "destinationdescription"
-                            placeholder="Enter a detailed itinerary of your package"
-                            className="min-h-32"
+                        <ReactQuill 
+                          value={packageDetails.destinationdescription} 
+                          onChange={handleQuillChange} 
+                          placeholder="Enter a detailed itinerary of your package" 
+                          className="" 
                         />
                       </div>
                    
