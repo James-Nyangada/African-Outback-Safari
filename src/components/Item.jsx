@@ -1,30 +1,33 @@
-import React from 'react'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../components/ui/card"
+import { Button } from "../components/ui/button"
+import { MapPinIcon } from "lucide-react"
 import { Link } from 'react-router-dom'
-import '../../src/styles/item.css'
 
 const Item = (props) => {
     return(
-        <Link to={`/packages/${props.id}`} className='itemfull'>
-            <img src={props.imageUrls[0]} alt={props.name} width={280} height={280} className='image' />
-            <div className='item'>
-                <p>{props.name}</p>
-                <div className="item-prices">
-                    <div className="part-1">
-                        <div className="item-price-new">
-                            {props.location}
-                        </div>
-                        <div className="item-price-old">
-                            ${props.price}
-                        </div>
-                    </div>
-                    <div className='part-2'>
-                        <div className='add-to-cart'>
-                            <button>View details</button>
-                        </div>
-                    </div>
+        <Card className="w-full mt-[60px] max-w-sm overflow-hidden">
+            <img 
+                src={props.imageUrls[0]} 
+                alt={props.name}
+                className="w-full h-48 object-cover"
+            />
+            <CardHeader>
+                <CardTitle className="text-[17px] font-bold">{props.name}</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <MapPinIcon className="w-4 h-4" />
+                <span> {props.location}</span>
                 </div>
-            </div>
-        </Link>
+                <p className="mt-2 font-semibold">{props.price}</p>
+            </CardContent>
+            <CardFooter>
+                <Link to={`/packages/${props.id}`} >
+                    <Button className="w-full">View More</Button>
+                </Link>
+                
+            </CardFooter>
+    </Card>
     )
 };
 export default Item

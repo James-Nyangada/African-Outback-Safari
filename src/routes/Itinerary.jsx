@@ -1,6 +1,18 @@
 import axios from "axios";
 import { useState } from "react";
-import styled from "styled-components";
+import { Button } from "../components/ui/button"
+import { Input } from "../components/ui/input"
+import { Label } from "../components/ui/label"
+import { Textarea } from "../components/ui/textarea"
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/ui/select"
+
 
 const Itinerary = () =>{
     const [tripDetails, setTripDetails] = useState({
@@ -44,226 +56,184 @@ const Itinerary = () =>{
             alert("Failed to book trip")
         }
     }
+    
     return(
-        <Container>
-            <div className="form">
-                <div className="form-left">
-                    <h1>Create your travel plan right now</h1>
-                    <p className="text-[20px]">Empowering Journeys Enchanting Memories.</p>
-                    <p className="text-[18px]">Plan your trip with the click of a button to any destionation in Kenya of your choice</p>
-                </div>
-                <div className="form-right">
-                    <div>
-                        <label className="block mb-2">Name</label>
-                        <input value={tripDetails.name} onChange={changeHandler} name="name" required type="text" placeholder="Enter Your Full Name" className="w-full border border-zinc-300 rounded p-2 mb-4" />
-                    </div>
-
+        <div className="min-h-screen bg-gradient-to-br mt-[100px] from-amber-100 to-orange-200 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden">
+          <div className="px-8 py-6 bg-[#506d18] text-white">
+            <h2 className="text-3xl font-bold text-center">Create your travel plan right now</h2>
+          </div>
+          <div className="px-8 py-6 space-y-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="name">Name</Label>
+                <Input value={tripDetails.name} onChange={changeHandler} id="name" name='name' placeholder="Your full name" required />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input value={tripDetails.emailaddress} onChange={changeHandler} name="emailaddress" required id="email" type="email" placeholder="your@email.com" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="phone">Phone Number</Label>
+                <Input value={tripDetails.phonenumber} onChange={changeHandler} name="phonenumber" required  id="phone" type="tel" placeholder="+1234567890" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="address">Address</Label>
+                <Input value={tripDetails.address} onChange={changeHandler} name="address" required id="address" placeholder="Your street address" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="city">City/State</Label>
+                <Input value={tripDetails.city} onChange={changeHandler} name="city" required id="city" placeholder="City, State" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="nationality">Nationality</Label>
+                <Input value={tripDetails.nationality} onChange={changeHandler} name="nationality" required  id="nationality" placeholder="Your nationality" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="destination">Select Destination</Label>
+                <Select value={tripDetails.destination} onValueChange={(value) => setTripDetails({...tripDetails, destination: value})} name="location" required>
+                  <SelectTrigger id="destination">
+                    <SelectValue placeholder="Select a destination" >{tripDetails.destination}</SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="serengeti">Serengeti National Park</SelectItem>
+                    <SelectItem value="maasai">Maasai Mara</SelectItem>
+                    <SelectItem value="kruger">Kruger National Park</SelectItem>
+                    <SelectItem value="okavango">Okavango Delta</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="attraction">Tourist Attraction</Label>
+                <Select value={tripDetails.touristattraction} onValueChange={(value)=> setTripDetails({...tripDetails, touristattraction: value})} name="touristattraction" required>
+                  <SelectTrigger id="attraction">
+                    <SelectValue placeholder="Select an attraction" >
+                    {tripDetails.touristattraction}
+                    </SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="wildlife">Wildlife Viewing</SelectItem>
+                    <SelectItem value="cultural">Cultural Experiences</SelectItem>
+                    <SelectItem value="scenic">Scenic Landscapes</SelectItem>
+                    <SelectItem value="adventure">Adventure Activities</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="activities">Activities</Label>
+                <Select   value={tripDetails.activities} onValueChange={(value) => setTripDetails({...tripDetails, activities: value})} name="activities" required>
+                  <SelectTrigger id="activities">
+                    <SelectValue placeholder="Select an activity" >
+                    {tripDetails.activities}
+                    </SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="game-drives">Game Drives</SelectItem>
+                    <SelectItem value="balloon">Hot Air Balloon Safaris</SelectItem>
+                    <SelectItem value="walking">Walking Safaris</SelectItem>
+                    <SelectItem value="bird-watching">Bird Watching</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="hotel">Hotel and Lounges</Label>
+                <Select value={tripDetails.hotel} onValueChange={(value) =>  setTripDetails({...tripDetails, hotel:value})} name="hotel" required>
+                  <SelectTrigger id="hotel">
+                    <SelectValue placeholder="Select accommodation" >{tripDetails.hotel}</SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="luxury">Luxury Lodge</SelectItem>
+                    <SelectItem value="tented">Tented Camp</SelectItem>
+                    <SelectItem value="treehouse">Treehouse</SelectItem>
+                    <SelectItem value="eco">Eco-Lodge</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="month">Intended Month of travel</Label>
+                <Select value={tripDetails.month} onValueChange={(value) =>  setTripDetails({...tripDetails, month:value})} name="month" required>
+                  <SelectTrigger id="month">
+                    <SelectValue placeholder="Select Month" >{tripDetails.month}</SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="January">January</SelectItem>
+                    <SelectItem value="February">February</SelectItem>
+                    <SelectItem value="March">March</SelectItem>
+                    <SelectItem value="April">April</SelectItem>
+                    <SelectItem value="May">May</SelectItem>
+                    <SelectItem value="June">June</SelectItem>
+                    <SelectItem value="July">July</SelectItem>
+                    <SelectItem value="August">August</SelectItem>
+                    <SelectItem value="September">September</SelectItem>
+                    <SelectItem value="October">October</SelectItem>
+                    <SelectItem value="November">November</SelectItem>
+                    <SelectItem value="December">December</SelectItem>
+                  </SelectContent>
+                </Select>
+            </div>
+            
+            <div className="space-y-2">
+                <Label htmlFor="year">Intended Year of travel</Label>
+                <Select value={tripDetails.year} onValueChange={(value) =>  setTripDetails({...tripDetails, year:value})} name="year" required>
+                  <SelectTrigger id="year">
+                    <SelectValue placeholder="Select Year" >{tripDetails.year}</SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="2024">2024</SelectItem>
+                    <SelectItem value="2025">2025</SelectItem>
+                    <SelectItem value="2026">2026</SelectItem>
                     
-                    <div>
-                        <label className="block mb-2">Email</label>
-                        <input value={tripDetails.emailaddress} onChange={changeHandler} name="emailaddress" required type="text" placeholder="Enter Your email address" className="w-full border border-zinc-300 rounded p-2 mb-4" />
-                    </div>
-
-                    
-                    <div>
-                        <label className="block mb-2">Phone number</label>
-                        <input value={tripDetails.phonenumber} onChange={changeHandler} name="phonenumber" required type="tel" placeholder="+254 123 435 789" className="w-full border border-zinc-300 rounded p-2 mb-4" />
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Address</label>
-                        <input value={tripDetails.address} onChange={changeHandler} name="address" required type="text" placeholder="Enter Your address info" className="w-full border border-zinc-300 rounded p-2 mb-4" />
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">City/State</label>
-                        <input value={tripDetails.city} onChange={changeHandler} name="city" required type="text" placeholder="Enter city,state or province" className="w-full border border-zinc-300 rounded p-2 mb-4" />
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Nationaility</label>
-                        <input value={tripDetails.nationality} onChange={changeHandler} name="nationality" required type="text" placeholder="E.g kenyan" className="w-full border border-zinc-300 rounded p-2 mb-4" />
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Select destination</label>
-                        <select value={tripDetails.destination} onChange={changeHandler} name="destination" required className="w-full border border-zinc-300 rounded p-2 mb-4">
-                            <option value="n/a"></option>
-                            <option value="Kenya">Kenya</option>
-                            <option value="Ethopia">Ethopia</option>
-                            <option value="Uganda">Uganda</option>
-                            <option value="Rwanda">Rwanda</option>
-                            <option value="Burundi">Burundi</option>
-                            <option value="Tanzania">Tanzania</option>
-                            <option value="Zambia">Zambia</option>
-                            <option value="Angola">Angola</option>
-                            <option value="Bostwana">Bostwana</option>
-                            <option value="Zimbabwe">Zimbabwe</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Tourist attration</label>
-                        <select value={tripDetails.touristattraction} onChange={changeHandler} name="touristattraction" required className="w-full border border-zinc-300 rounded p-2 mb-4">
-                            <option value="n/a"></option>
-                            <option value="Mt Kenya">Mt Kenya</option>
-                            <option value="Maasai Mara">Maasai Mara</option>
-                            <option value="Lake Nakuru">Lake Nakuru</option>
-                            <option value="Mombasa">Mombasa</option>
-                            <option value="Lake Victoria">Lake Victoria</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Activities</label>
-                        <select value={tripDetails.activities} onChange={changeHandler} name="activities" required className="w-full border border-zinc-300 rounded p-2 mb-4">
-                            <option value="n/a"></option>
-                            <option value="Activities 1">Activities 1</option>
-                            <option value="Activities 2">Activities 2</option>
-                            <option value="Activities 3">Activities 3</option>
-                            <option value="Activities 4">Activities 4</option>
-                            <option value="Activities 5">Activities 5</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Hotel and Lounges</label>
-                        <select value={tripDetails.hotel} onChange={changeHandler} name="hotel" required className="w-full border border-zinc-300 rounded p-2 mb-4">  
-                            <option value="n/a"></option>
-                            <option value="Hotel 1">Hotel 1</option>
-                            <option value="Hotel 2">Hotel 2</option>
-                            <option value="Hotel 3">Hotel 3</option>
-                            <option value="Hotel 4">Hotel 4</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Intended Month of Travel</label>
-                        <select value={tripDetails.month} onChange={changeHandler} name="month" required className="w-full border border-zinc-300 rounded p-2 mb-4">
-                            <option value="n/a"></option>
-                            <option value="January">January</option>
-                            <option value="February">February</option>
-                            <option value="March">March</option>
-                            <option value="April">April</option>
-                            <option value="May">May</option>
-                            <option value="June">June</option>
-                            <option value="July">July</option>
-                            <option value="August">August</option>
-                            <option value="September">September</option>
-                            <option value="October">October</option>
-                            <option value="November">November</option>
-                            <option value="December">December</option>
-
-                        </select>
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Intended Year of Travel</label>
-                        <select value={tripDetails.year} onChange={changeHandler} name="year" required className="w-full border border-zinc-300 rounded p-2 mb-4">
-                            <option value="n/a"></option>
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Number of Days</label>
-                        <input value={tripDetails.days} onChange={changeHandler} name="days" required type="number" placeholder="How many days is the trip to take" className="w-full border border-zinc-300 rounded p-2 mb-4" />
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Tour Category</label>
-                        <select value={tripDetails.tourcategory} onChange={changeHandler} name="tourcategory" required className="w-full border border-zinc-300 rounded p-2 mb-4">
-                            <option value="n/a"></option>
-                            <option value="Solo travel">Solo travel</option>
-                            <option value="Group travel">Group travel</option>
-                            <option value="Honeymoon">Honeymoon</option>
-                            <option value="Family Travel">Family Travel</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label className="block mb-2">Number of Participants</label>
-                        <input value={tripDetails.participants} onChange={changeHandler} name="participants" required type="number" placeholder="Enter Total number of people travelling" className="w-full border border-zinc-300 rounded p-2 mb-4" />
-                    </div>
-                    <div className="mb-6">
-                        <p className="text-lg font-medium mb-2">Tell us more in order to curate the best safari for you</p>
-                        <textarea value={tripDetails.additional} onChange={changeHandler} name="additional" required  placeholder="Enter any additional information you feel is left out" className="w-full border border-zinc-300 rounded p-2 mb-4"></textarea>
-                    </div>
-                    <div style={{ position: 'relative' }}>
-                    <button onClick={book_now} className="bg-[#FFEB3B] text-black py-4 px-6 rounded-[15px] hover:bg-[#388E3C] text-center book">Submit</button>
-                    </div>
-                    
-                </div>
-                
+                  </SelectContent>
+                </Select>
+            </div>
+            
+            <div className="space-y-2">
+                <Label htmlFor="days">Number of Days</Label>
+                <Input value={tripDetails.days} onChange={changeHandler} name="days" required id="days" placeholder="How many days" />
             </div>
             
            
-        </Container>
+            
+            <div className="space-y-2">
+              <Label htmlFor="category">Tour Category</Label>
+              <Select value={tripDetails.tourcategory} onValueChange={(value) => setTripDetails({...tripDetails, tourcategory:value})} name="tourcategory" required>
+                <SelectTrigger id="category">
+                  <SelectValue placeholder="Select a category" >
+                    {tripDetails.tourcategory}
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="family">Family Safari</SelectItem>
+                  <SelectItem value="luxury">Luxury Safari</SelectItem>
+                  <SelectItem value="adventure">Adventure Safari</SelectItem>
+                  <SelectItem value="photography">Photography Safari</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="address">Number of Participants</Label>
+                <Input value={tripDetails.participants} onChange={changeHandler} name="participants" required id="address" placeholder="Enter Total number of people travelling" />
+            </div>
+            
+            <div className="space-y-2">
+              <Label htmlFor="info">More Information</Label>
+              <Textarea id="info" placeholder="Any additional requests or information..." />
+            </div>
+            
+            <div className="pt-4">
+              <Button 
+                onClick={book_now}
+                className="w-full"
+              >
+                Book Now
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
     )
 }
 
-const Container = styled.div`
-    width: 100%;
-    max-width: 1700px;
-    margin: 200px auto;
-    .form{
-      
-        display: grid;
-        grid-template-columns: 1.5fr 2fr;
-        align-items: center;
-    }
-    .form-left{
-        h1{
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-    }
-    .form-right{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-    .book{
-
-    }
-    @media(max-width: 1354px){
-        width: 100%;
-        max-width: 1200px;
-        margin: 200px auto;
-        .book{
-            right: 600px;
-        } 
-    }
-    @media (max-width: 1004px) {
-        width: 100%;
-        max-width: 1200px;
-        margin: 200px auto;
-        .form{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .form-right{
-            display: flex;
-            flex-direction: column;
-        }
-    }
-    @media (max-width: 500px) {
-        .form-left{
-            h1{
-                font-size: 1.5rem;
-            }
-        }
-    
-    }
-    @media (max-width: 370px) {
-        .form-left{
-            h1{
-                font-size: 1.2rem;
-            }
-        }
-    }
-`;
 export default Itinerary
