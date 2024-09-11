@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, MapPin, Star, User, DollarSign, Coffee, Utensils, Car, Hotel } from 'lucide-react'
+import { Calendar, MapPin, Star, Hotel } from 'lucide-react'
 import { Button } from "../components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import { Input } from "../components/ui/input"
 import { Textarea } from "../components/ui/textarea"
@@ -191,7 +191,13 @@ const TourDescription = () =>{
                   <span>{hotelName.hotel}</span>
                 </div>
                 <div className="text-xl font-bold"  key={index}>
-                {hotelName.price} <span className="text-sm font-normal text-muted-foreground"></span>
+                <Link to={'/contact-us'}>
+                <Button size="lg" className="w-full">
+                  {hotelName.price}
+                </Button>
+                  
+                </Link>
+                 <span className="text-sm font-normal text-muted-foreground"></span>
                 </div>
               </CardContent>
             ))}
