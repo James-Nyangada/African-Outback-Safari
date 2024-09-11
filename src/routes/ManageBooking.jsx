@@ -386,8 +386,8 @@ const ManageBooking = () =>{
                             <TableHead>Name</TableHead>
                             <TableHead>Phone Number</TableHead>
                             <TableHead>Email Address</TableHead>
-                            <TableHead >Trip Category</TableHead>
-                            <TableHead >Date of Travel</TableHead>
+                            <TableHead >Name of Package</TableHead>
+                            
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -398,21 +398,10 @@ const ManageBooking = () =>{
                                 <TableCell>{booking.name}</TableCell>
                                 <TableCell >{booking.phonenumber}</TableCell>
                                 <TableCell >{booking.emailaddress}</TableCell>
-                                <TableCell >{booking.tourcategory}</TableCell>
-                                <TableCell className="font-medium">{booking.month},{booking.year}</TableCell>
+                                <TableCell >{booking.destination}</TableCell>
+                                
 
-                                <TooltipProvider>
-                                    <Tooltip>
-                                        <TooltipTrigger asChild>
-                                            <button className="p-4 border border-black rounded-md">
-                                                <MdOutlineEdit />
-                                            </button>
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>Edit</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
+                          
 
 
                                 <TooltipProvider>

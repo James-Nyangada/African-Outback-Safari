@@ -105,7 +105,7 @@ const TourDescription = () =>{
             <CardDescription>All-inclusive safari experience</CardDescription>
           </CardHeader>
           <CardContent>
-          <Link to={'/contact-us'}>
+          <Link to={'/create-booking'}>
                 <Button size="lg" className="w-full">
                 Get a Quote
                 </Button>
