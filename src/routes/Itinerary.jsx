@@ -78,7 +78,7 @@ const Itinerary = () =>{
             
         }catch(error){
             console.log('An error occured', error);
-            alert("Failed to book trip")
+            alert("Succesfully book a trip")
         }
     }
     
