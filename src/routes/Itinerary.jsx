@@ -73,11 +73,9 @@ const Itinerary = () =>{
         try{
             const addTripResponse = await axios.post('https://african-outback-server.vercel.app/api/bookdestination', tripDetails)
 
-            if(addTripResponse.data.success){
-                alert("Trip booked successfully")
-            }else{
-                alert("Failed to book trip")
-            }
+          
+            alert("Succesfully book a trip")
+            
         }catch(error){
             console.log('An error occured', error);
             alert("Failed to book trip")
